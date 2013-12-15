@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Editor Demo</title>
+	<link href="../media/css/demo.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+	div.mod {
+		margin: 2em;
+		padding: 0.5em;
+		background-color: #F5F5F5;
+		border: 1px solid #C3C3C3;
+	}
+
+	div.clonable {
+		padding:  1em 0.5em 0.5em 0.5em;
+		border-bottom: 1px dotted #C3C3C3;
+	}
+	div.clonable-wrapper > div.action { padding:  1em 0.5em 0.5em 0.5em; } /* new editor */
+
+	p.name {
+		display: block;
+		font-weight: bold;
+		font-size: 120%;
+		/*padding: 2px 2px 2px 0.5em;
+		background-color: #E5E5E5;
+		border-bottom: 1px solid #C3C3C3;*/
+	}
+	p.type { display: none; }
+
+	a { padding-right: 0.5em; }
+
+	/****** EDITOR ******/
+	.editor {
+		margin: 1em;
+		padding: 0.5em;
+		/*background-color: #E5E5E5;*/
+	}
+	.editor label {
+		font-family: serif;
+		font-size: 110%;
+		text-transform: capitalize;
+		margin-top: 0.2em;
+	}
+	.editor input { margin-right: 1em; }
+	.editor select, .editor input, .editor textarea {
+		font-family: serif;
+		font-size: 100%;
+	}
+	.editor input, .editor textarea { font-size: 100%; }
+	.editor input { 
+		padding: 0.2em;
+		border: 1px solid #999999;
+		width: 50%;
+	}
+	.editor textarea {
+		width: 99%;
+		height: 15em;
+		margin: 0.5em 0 0.5em 0;
+		padding: 0.2em;
+		border: 1px solid #999999;
+	}
+	.editor select {
+		margin-right: 0.5em;
+	}
+	</style>
+
+
+
+	<script type="text/javascript" src="../media/js/jquery.js"></script>
+	<script type="text/javascript" src="editor.jquery.js"></script>
+
+
+	<script language="Javascript"> 
+	<!-- 
+
+	$(document).ready( function () {
+
+		$('div.clonable').editor();
+		$('div.clonable-wrapper').editorFactory();
+
+	});
+
+	// --> 
+	</script>
+</head>
+<body>
+	<div class="mod">
+		<form action="post">
+		<h3 class="code">FILTER</h3>
+		<input type="hidden" name="next" value="CLASS/LDOC/FILTER" />
+
+		<div id="FILTER" class="clonable-wrapper">
+
+			<div class="clonable">
+				<p class="name">todo</p>
+				<p class="value">Transform defquery into user defined classes</p>
+				<p class="type">text</p>
+
+				<div class="editor">
+					<div class="tbar">
+						<label for="">
+							Name:
+							<input type="text" name="name" value="todo" />
+						</label>
+						<label for="">
+							Type:
+							<select name="type">
+								<option value="text" >text</option>
+								<option value="html" >html</option>
+								<option value="code" >code</option>
+								<option value="list" >list</option>
+								<option value="tag" >tag</option>
+							</select>
+						</label>
+					</div>
+					<textarea name="value">Transform defquery into user defined classes</textarea>
+					<div class="bbar action">
+						<button type="button" class="save">save</button>
+						<button type="button" class="cancel">cancel</button>
+						<button type="button" class="run">run</button>
+					</div>
+				</div><!-- end of editor -->
+
+			</div><!-- end of clonable -->
+
+
+			<div class="clonable">
+				<p class="name">example</p>
+				<p class="value">(lambda (x y)  (print (+ x y)))</p>
+				<p class="type">code</p>
+
+				<div class="editor">
+					<div class="tbar">
+						<label for="">
+							Name:
+							<input type="text" name="name" value="example" />
+						</label>
+						<label for="">
+							Type:
+							<select name="type">
+								<option value="text" >text</option>
+								<option value="html" >html</option>
+								<option value="code" >code</option>
+								<option value="list" >list</option>
+								<option value="tag" >tag</option>
+							</select>
+						</label>
+					</div>
+					<textarea name="value">(lambda (x y)  (print (+ x y)))</textarea>
+					<div class="bbar action">
+						<button type="button" class="save">save</button>
+						<button type="button" class="cancel">cancel</button>
+						<button type="button" class="run">run</button>
+					</div>
+				</div><!-- end of editor -->
+
+			</div><!-- end of clonable -->
+
+
+
+			<div class="clonable">
+
+				<p class="name">test-run</p>
+				<p class="value">(assert T ((+ x y)) (3 4))</p>
+				<p class="type">code</p>
+
+				<div class="editor">
+					<div class="tbar">
+						<label for="">
+							Name:
+							<input type="text" name="name" value="test-run" />
+						</label>
+						<label for="">
+							Type:
+							<select name="type">
+								<option value="text" >text</option>
+								<option value="html" >html</option>
+								<option value="code" >code</option>
+								<option value="list" >list</option>
+								<option value="tag" >tag</option>
+							</select>
+						</label>
+					</div>
+					<textarea name="value">(assert T ((+ x y)) (3 4))</textarea>
+					<div class="bbar action">
+						<button type="button" class="save">save</button>
+						<button type="button" class="cancel">cancel</button>
+						<button type="button" class="run">run</button>
+					</div>
+				</div><!-- end of editor -->
+
+			</div><!-- end of clonable -->
+			
+			<div class="factory-clonable">
+
+				<p class="name"></p>
+				<p class="value"></p>
+				<p class="type"></p>
+
+				<div class="editor">
+					<div class="tbar">
+						<label for="">
+							Name:
+							<input type="text" name="name" value="" />
+						</label>
+						<label for="">
+							Type:
+							<select name="type">
+								<option value="text" >text</option>
+								<option value="html" >html</option>
+								<option value="code" >code</option>
+								<option value="list" >list</option>
+								<option value="tag" >tag</option>
+							</select>
+						</label>
+					</div>
+					<textarea name="value"></textarea>
+					<div class="bbar action">
+						<button type="button" class="save">save</button>
+						<button type="button" class="cancel">cancel</button>
+						<button type="button" class="run">run</button>
+					</div>
+				</div><!-- end of editor -->
+
+			</div><!-- end of factory-clonable -->
+
+		</div><!-- end of clonable-wrapper -->
+	</form>
+	</div><!-- end of mod -->
+</body>
+</html>

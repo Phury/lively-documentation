@@ -1,0 +1,29 @@
+/*
+colorscheme: http://colorschemedesigner.com/#3s21TkhxBw0w0
+*/
+
+/*
+10% grey: ebebeb;
+15% grey: e1e1e1;
+20% grey: d7d7d7;
+25% grey: cccccc;
+30% grey: c2c2c2;
+35% grey: b7b7b7;
+40% grey: acacac;
+45% grey: a1a1a1;
+50% grey: 959595;
+55% grey: 898989;
+60% grey: 7d7d7d;
+65% grey: 707070;
+70% grey: 636363;
+75% grey: 555555;
+80% grey: 464646;
+85% grey: 363636;
+90% grey: 252525;
+95% grey: 111111;
+*/
+
+@import url("base.css");
+@import url("layout.css");
+@import url("form.css");
+@import url("typo.css");

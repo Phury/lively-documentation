@@ -1,0 +1,37 @@
+
+
+
+<div class="tags">
+	<div class="horizontal">
+		<h3>tag(s):</h3>
+		<ul><!-- TMPL_LOOP tags -->
+			<li><a><!-- TMPL_VAR tag --></a></li><!-- /TMPL_LOOP -->
+		</ul>
+	</div>
+	
+	<!-- TMPL_IF edit -->
+	
+	<div class="tagEditor">
+		<div class="tagChoice">
+			<!-- TMPL_LOOP all-tags -->
+			<fieldset><legend><!-- TMPL_VAR name --></legend>
+				<!-- TMPL_LOOP children -->
+				<label for="<!-- TMPL_VAR name -->">
+					<input id="<!-- TMPL_VAR name -->" type="checkbox" name="tag" value="<!-- TMPL_VAR name -->"/>
+					<!-- TMPL_VAR name -->
+				</label><!-- /TMPL_LOOP -->
+			</fieldset><!-- /TMPL_LOOP -->
+			<hr class="clear" />
+		</div><!-- end of tagchoice -->
+		
+		<div class="bbar action">
+			<button type="button" class="save">save</button>
+			<button type="button" class="cancel">cancel</button>
+		</div>
+	</div><!-- end of tageditor -->
+	
+	<!-- /TMPL_IF -->
+	
+</div><!-- end of tags -->
+
+

@@ -1,0 +1,160 @@
+/*********** tab ***********/
+
+
+.listing > h3 {
+	margin: 0;
+	height: 48px;
+	background: transparent url("img/tab_left.png") no-repeat bottom right;
+	text-align: right;
+}
+.listing > h3 span {
+	float: right;
+	display: block;
+	height: 48px;
+	width: 260px;
+	text-align: center;
+	background: transparent url("img/tab_right.png") no-repeat bottom right;
+
+}
+.listing > h3 span a {
+	color: #213E68;
+	line-height: 40px;
+	padding-left: 20px;
+	background: transparent url("img/right.png") no-repeat left;
+
+}
+.listing > h3.open span a {
+	background: url("img/up.png") no-repeat left;
+}
+
+.listing div.toggle { background-color: #E5E5E5; padding-bottom: 0.5em; padding-left: 20px; }
+
+.listing hr { margin: 0; padding: 0; visibility: hidden;}
+
+
+/*********** scrollable ***********/
+div.scrollable { 
+    position:relative;
+    overflow:hidden;          
+    width: 90%;
+    height:360px;
+	background: #F9F9F9;
+	border: 1px solid #C3C3C3;
+} 
+
+/*  
+    root element for scrollable items. Must be absolutely positioned 
+    and it should have a super large width to accomodate scrollable items. 
+    it's enough that you set width and height for the root element and 
+    not for this element. 
+*/ 
+div.scrollable div.items {     
+    /* this cannot be too large */ 
+    width:30000em; 
+    position:absolute;
+	clear: both;
+} 
+ 
+/*  
+    a single item. must be floated on horizontal scrolling 
+    typically this element is the one that *you* will style 
+    the most. 
+*/ 
+div.scrollable div.items div { 
+    float:left;
+
+	width: 222px;
+	height:350px;
+	padding: 0.3em;
+	border-left: 1px dotted #ececec;
+	background: #FFFFFF;
+}
+ 
+div.scrollable div.items div h3 { margin: 0 0 0.3em 0; }
+ 
+/* you may want to setup some decorations to active item */ 
+div.items div.active { 
+    background: #CCCCCC;
+	/*border: 1px solid #C3C3C3;*/
+}
+
+.scrollable li { border-bottom: 1px solid #ececec; }
+.scrollable li a {
+	display: block;
+	margin: 0.2em 0  0.2em 0;
+	padding: 0.2em;
+}
+.scrollable li a:hover {
+	background: #7BC477;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+
+/*********** next/prev ***********/
+
+/* this makes it possible to add next button beside scrollable */
+div.scrollable {
+	float:left;		
+}
+
+/* prev, next, prevPage and nextPage buttons */
+a.prev, a.next, a.prevPage, a.nextPage {
+	display:block;
+	width:18px;
+	height:18px;
+	background:url("img/left.png") no-repeat;
+	float:left;
+	margin:150px 10px;
+	cursor:pointer;
+}
+
+/* disabled navigational button */
+a.disabled {
+	visibility:hidden !important;		
+}
+
+/* next button uses another background image */
+a.next, a.nextPage {
+	background-image:url("img/right.png");
+	clear:right;	
+}
+
+a.prev:hover, a.prevPage:hover {
+	background-image:url("img/left_hover.png");		
+}
+a.next:hover, a.nextPage:hover {
+	background-image:url("img/right_hover.png");	
+}
+
+
+
+/*********** navigator ***********/
+
+/* position and dimensions of the navigator */
+div.navi {
+	margin-left:328px;
+	width:200px;
+	height:20px;
+}
+
+
+/* items inside navigator */
+div.navi a {
+	width:8px;
+	height:8px;
+	float:left;
+	margin:3px;
+	background:url(../img/navigator.png) 0 0 no-repeat;     
+	cursor:pointer;	
+}
+
+/* mouseover state */
+div.navi a:hover {
+	background-position:0 -8px;      
+}
+
+/* active state (current page state) */
+div.navi a.active {
+	background-position:0 -16px;     
+} 	

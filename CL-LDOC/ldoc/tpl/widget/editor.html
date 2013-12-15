@@ -1,0 +1,53 @@
+
+<div class="clonable">
+	
+	<p class="name"><!-- TMPL_VAR name --></p>
+	<!-- TMPL_IF parse --><div><!-- TMPL_VAR parsed-value --></div>
+	<pre class="value hidden"><!-- TMPL_VAR value --></pre>
+	<!-- TMPL_ELSE --><pre class="value"><!-- TMPL_VAR value --></pre>
+	<!-- /TMPL_IF -->
+	<p class="type hidden"><!-- TMPL_VAR type --></p>
+
+	<!-- TMPL_IF edit -->
+
+	<div class="editor">
+		<div class="tbar">
+			
+			<fieldset>
+				<label for="">
+					Global:
+					<input type="checkbox" name="option" value="global" />
+				</label>
+			</fieldset>
+			
+			<fieldset>
+				<label for="">
+					Name:
+					<input type="text" name="name" value="<!-- TMPL_VAR name -->" />
+				</label>
+				<label for="">
+					Type:
+					<select name="type">
+						<optgroup label="Current type">
+							<option value="<!-- TMPL_VAR type -->" selected ><!-- TMPL_VAR type --></option>
+						</optgroup>
+
+						<optgroup label="Possible types">
+							<!-- TMPL_LOOP all-types -->
+							<option value="<!-- TMPL_VAR type -->" ><!-- TMPL_VAR type --></option><!-- /TMPL_LOOP -->
+						</optgroup>
+					</select>
+				</label>
+			</fieldset>
+			
+		</div>
+		<textarea name="value"><!-- TMPL_VAR value --></textarea>
+		<div class="bbar action">
+			<button type="button" class="save">save</button>
+			<button type="button" class="cancel">cancel</button>
+		</div>
+	</div><!-- end of editor -->
+
+	<!-- /TMPL_IF -->
+
+</div><!-- end of clonable -->

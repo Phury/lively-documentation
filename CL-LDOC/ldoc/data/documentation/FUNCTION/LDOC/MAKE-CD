@@ -1,0 +1,6 @@
+("tag" "text" "function")("tag" "text" "undocumented")("Example" "code"
+                                                       "(make-cd \"The clairvoyant\" \"Iron Maiden\" 10 t)
+(make-cd \"Best of the beast\" \"Iron Maiden\" 8 t)
+(make-cd \"Roses\" \"Kathy Mattea\" 2 t)
+(make-cd \"Fly\" \"Dixie Chicks\" 6 t)
+(make-cd \"Home\" \"Dixie Chicks\" 4 t)")

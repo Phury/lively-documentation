@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title><!-- TMPL_VAR title --></title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	
+	<link href="/media/css/green/style.css" rel="stylesheet" type="text/css" />
+
+	<script type="text/javascript" src="/media/js/jquery.js"></script>
+	<script type="text/javascript" src="/media/js/ldoc/accordion.jquery.js"></script>
+	<script type="text/javascript" src="/media/js/ldoc/alphasorter.jquery.js"></script>
+	<script type="text/javascript" src="/media/js/ldoc/editor.jquery.js"></script>
+	<script type="text/javascript" src="/media/js/ldoc/cloud.jquery.js"></script>
+	<script type="text/javascript" src="/media/js/ldoc/filterable.jquery.js"></script>
+	<script type="text/javascript" src="/media/js/ldoc/tag-editor.jquery.js"></script>
+	<script type="text/javascript" src="/media/js/ldoc/ldoc.jquery.js"></script>
+	
+
+<script type="text/javascript"> 
+<!-- 
+$(document).ready( function () {
+	
+	$('#content div.accordion').accordion({headerClass: 'h2', contentClass: 'div.toggle'});
+	$('#content div.listing').alphasorter({filterPosition: 'h2'});
+	$('#content div.clonable').editor();
+	$('#content div.clonable-wrapper').factory();
+	$('#content div.tags').tagEditor();
+	
+	$('#sidebar div.alpha').alphasorter({filterPosition: 'h3'});
+	$('#sidebar div.list').filterable({filterClass: 'horizontal'});
+	
+	$('body').ldoc();
+});
+// --> 
+</script>
+	
+</head>
+<body>
+<div>
+
+<div id="headerSmall">
+
+	<h1><span>Lively Documentation</span></h1>
+	<h2><span>Logo</span></h2>
+
+	<!-- TMPL_CALL menu -->
+
+	<div id="search">
+		<form action="?SEARCH/TAG/" method="post">
+			<fieldset>
+				<input type="text" name="search" class="textfield" />
+				<button type="submit" class="search" >Search</button>
+			</fieldset>
+		</form>
+	</div><!-- end of search -->
+
+</div><!-- end of header -->

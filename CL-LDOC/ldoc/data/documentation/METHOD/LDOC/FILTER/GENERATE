@@ -1,0 +1,4 @@
+("tag" "text" "METHOD")
+("docstring" "text" "Do not forget to call this function when needed!")
+("docstring" "text" "(lambda (x y)  (print (+ x y)))")
+("docstring" "text" "(assert T ((+ x y)) (3 4))")

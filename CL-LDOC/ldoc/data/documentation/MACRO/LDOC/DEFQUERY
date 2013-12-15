@@ -1,0 +1,7 @@
+("tag" "text" "macro")("example" "code"
+                       "; Returns all the slots of the class filter in package Ldoc
+(slots (result
+         (execute-query
+           (query \"SLOTS\" \"LDOC\" \"CLASS\" \"FILTER\")))) ")("Unit-Test"
+                                                                 "code"
+                                                                 "(assert (= (+ 2 5) 7))")

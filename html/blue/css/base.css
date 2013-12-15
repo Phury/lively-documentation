@@ -1,0 +1,74 @@
+/* 
+CSS GRID Framework
+
+Helps for the creation of grids in css
+Author: Pierre-Henri Van de Velde
+*/
+
+/* 
+gr = grid, cell = content, cell-r = right cell
+gr1 100, 
+gr2 50/50, gr3 66/33, gr4 33/66, gr5 75/25, gr6 25/75
+gr7 33/33/33, gr8 50/25/25, gr9 25/25/50, gr10 25/50/25
+gr11 25/25/25/25
+
+select with jQuery: div[class^=gr]
+*/
+
+/* General */
+
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote,
+pre, form, fieldset, table, th, td { margin: 0; padding: 0; }
+.cell, .cell-l, .cell-r { float: left; }
+hr { clear: both; visibility: hidden; }
+
+/* One column */
+.gr1 .cell { width: 100%; }
+/* Two columns */
+.gr2 > .cell { width: 50%; }
+.gr3 > .cell { width: 33%; } .gr3 > .cell:first-child { width: 66%; }
+.gr4 > .cell { width: 66%; } .gr4 > .cell:first-child { width: 33%; }
+.gr5 > .cell { width: 25%; } .gr5 > .cell:first-child { width: 75%; }
+.gr6 > .cell { width: 75%; } .gr6 > .cell:first-child { width: 25%; }
+/* Three columns */
+.gr7 > .cell { width: 33%; }
+.gr8 > .cell { width: 25%; } .gr8 > .cell:first-child { width: 50%; }
+.gr9 .cell-l { width: 25%; } .gr9 .cell { width: 25%; } .gr9 .cell-r { width: 50%; }
+.gr10 .cell-l { width: 25%; } .gr10 .cell { width: 50%; } .gr10 .cell-r { width: 25%; }
+/* Four columns */
+.gr11 .cell { width: 25%; }
+
+
+
+/*
+CSS MENU FRAMEWORK
+
+Helps for the creation of vertical and horizontal menu layouts
+
+mh = menu horizontal
+mv = menu vertical
+
+*/
+.mv {
+	text-align: left;
+}
+.mv li {
+	display: block;
+	list-style: none;
+}
+
+
+.mh {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+.mh li {
+	float: left;
+	display: block;
+	list-style-type: none;
+}
+
+.mh li a {
+	display: block;
+}

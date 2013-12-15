@@ -1,0 +1,52 @@
+body {
+	font-size: 1em;
+	font-family: sans-serif;
+}
+h1, h2, h3, h4, h4, h5, h6 {
+	font-family: "Georgia", "Calibri", serif;
+	font-weight: normal;
+	/*text-transform: lowercase;*/
+	margin-top: 1em;
+	color: #F2CF93;
+}
+/*h1 { font-size: 300%; display: block; border-bottom: 5px solid #F2CF93; }
+h2 { font-size: 250%; }
+h3 { font-size: 225%; }
+h4 { font-size: 150%; }*/
+
+h1 { font-size: 175%; display: block; }
+h2 { font-size: 150%; }
+h3 { font-size: 125%; }
+h4 { font-size: 115%; }
+
+a, p { line-height: 1.2em; }
+a {
+	color: #7BC477;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+a.code {
+	font-family: "Monaco", "Courrier New";
+}
+
+p.docstring {
+	font-family: serif;
+	font-style: italic;
+}
+
+pre.code {
+	font-family: "Monaco", "Courrier New";
+	font-size: 0.9em;
+	margin: 1em;
+	padding: 0 1em 0 1em;
+	background: #dadada;
+	border: 1px solid #bbbbbb;
+	border-left: 5px solid #bbbbbb;
+}
+
+h3.code {
+	font-family: "Monaco", "Courrier New";
+}

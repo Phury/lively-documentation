@@ -1,0 +1,121 @@
+
+body > .wrapper {
+	/*width: 1024px;
+	margin: 0 auto 0 auto;*/
+}
+
+/* header */
+#header {
+	position: relative;
+	border-bottom:1px solid #C6D880;
+}
+#header .navbar {
+	position: absolute;
+	bottom: -1px;
+	margin-left: 1em;
+}
+
+#header .navbar h3 {
+	display: none;
+}
+
+#header .navbar li a {
+	margin: 0.3em 0.3em 0 0.3em;
+	padding: 0.5em;
+	border-left: 1px solid #F5F5F5;
+	border-right: 1px solid #F5F5F5;
+	background: #F5F5F5;
+	text-decoration: none;
+}
+
+#header .navbar li a.active {
+	background-color: #E6EFC2;
+	border-top: 1px solid #C6D880;
+	border-left: 1px solid #C6D880;
+	border-right: 1px solid #C6D880;
+	color:#529214;
+}
+
+#header .navbar li a:hover {
+	border-top: 1px solid #C3C3C3;
+	border-left: 1px solid #C3C3C3;
+	border-right: 1px solid #C3C3C3;
+	background-color: #FFFFFF;
+	text-decoration: underline;
+}
+
+#header form {
+	float: right;
+}
+
+/* content */
+.content {
+	padding: 1em 0 1em 0;
+}
+
+.content > div, .content > form {
+	margin: 0 1em 0 1em;
+	padding: 2em 1.5em 1em 1.5em;
+	background: #f5f5f5;
+	border-bottom: 1px dotted #959595;
+}
+
+.content > form.editTrue {
+	background: #fffff2;
+}
+
+.content .mh li {
+	margin: 0 0.3em 0 0.3em;
+}
+
+/* footer */
+#footer {
+	margin: 4em 0 2em 0;
+	padding: 0.2em 0 0 0;
+	border-top: 1px solid #C3C3C3;
+	font-size: 0.7em;
+	text-transform: lowercase;
+	color: #636363;
+}
+
+
+
+/* listing */
+.listing {
+	font-size: 0.8em;
+	padding: 0 0.5em 0 0.5em;
+}
+.listing li {
+	padding: 0.2em 0 0.2em 0;
+	display: block;
+	border-bottom: 1px solid #959595;
+}
+
+.listing li a {
+	display: block;
+	background: inherit;
+	text-decoration: none;
+	color: #636363;
+}
+.listing li a:hover {
+	background: #4285A6;
+	color: #ebebeb;
+}
+
+.listing .toggleSubList { border: 0; }
+.listing a.toggle { 
+	display: inline; 
+	float: right;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+.listing a.toggle:hover {
+	background: inherit;
+}
+
+.box {
+	padding: 1.5em 0 1.5em 0;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #C3C3C3;
+}

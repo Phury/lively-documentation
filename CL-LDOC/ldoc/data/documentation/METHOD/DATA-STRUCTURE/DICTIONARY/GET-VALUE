@@ -1,0 +1,2 @@
+("tag" "text" "METHOD")
+("docstring" "text" "Returns the value to which the key is mapped in this dictionary")

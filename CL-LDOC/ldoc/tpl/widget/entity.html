@@ -1,0 +1,62 @@
+
+<form action="?edit-entity" method="post" class="entity-handler">
+		
+<div class="box">
+	
+	<h3 id="<!-- TMPL_VAR name -->" class="code"><!-- TMPL_VAR name --></h3>
+	
+	<input type="hidden" name="uri" value="<!-- TMPL_VAR uri -->" />
+	
+	<!-- TMPL_CALL tag-editor -->
+	
+	<div class="clonable-wrapper">
+		<!-- TMPL_LOOP documentation -->
+		<!-- TMPL_CALL editor -->	
+		<!-- /TMPL_LOOP -->
+
+		
+		<!-- TMPL_IF edit -->
+		<div class="factory-clonable">
+
+			<p class="name"></p>
+			<pre class="value"></pre>
+			<p class="type"></p>
+
+			<div class="editor">
+				<div class="tbar">
+					<label for="">
+						Name:
+						<input type="text" name="name" value="" />
+					</label>
+					<label for="">
+						Type:
+						<select name="type">
+							<!-- TMPL_LOOP all-types -->
+							<option value="<!-- TMPL_VAR type -->" ><!-- TMPL_VAR type --></option><!-- /TMPL_LOOP -->
+						</select>
+					</label>
+				</div>
+				<textarea name="value"></textarea>
+				<div class="bbar action">
+					<button type="button" class="save">save</button>
+					<button type="button" class="cancel">cancel</button>
+				</div>
+			</div><!-- end of editor -->
+
+		</div><!-- end of factory-clonable -->
+		<!-- /TMPL_IF -->
+
+	</div><!-- end of clonable-wrapper -->
+	
+	<!-- TMPL_IF edit -->
+	<div class="bbox action">
+		<button type="submit" class="save" >
+			<img src="/media/img/icons/save.png">
+			save modifications
+		</button>
+	</div>
+	<!-- /TMPL_IF -->
+	
+</div><!-- end of box -->
+
+</form>

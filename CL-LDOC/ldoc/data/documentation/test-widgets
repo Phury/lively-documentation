@@ -1,0 +1,8 @@
+("tag" "test" "class")
+("tag" "test" "printing")
+("tag" "test" "private")
+("tag" "test" "todo")
+("tutorial" "text" "This is yet another useful example")
+("test-run" "text" "(assert T ((+ x y)) (3 4))")
+("example" "text" "(lambda (x y)  (print (+ x y)))")
+("todo" "text" "Transform defquery into user defined classes")

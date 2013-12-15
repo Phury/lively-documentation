@@ -1,0 +1,119 @@
+.menubox { float: left; width: 33%; }
+.contentbox { margin-left: 35%;}
+
+#header {
+	position: relative;
+	background: #7bc477;
+	border-bottom:1px solid #2B7F27;
+}
+#header h1 { 
+	margin: 0;
+	color: #ffffff;
+}
+#header h2, #header .navbar h3 { display: none; }
+                             
+#header .navbar {
+	position: absolute;
+	bottom: -1px;
+	margin-left: 1em;
+}
+
+#header .navbar li a {
+	margin: 0.3em 0.3em 0 0.3em;
+	padding: 0.6em 1em 0.6em 1em;
+	border-left: 1px solid #7bc477;
+	border-right: 1px solid #7bc477;
+	background: #7bc477;
+	font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size: 0.9em;
+	font-weight: bold;
+	color:#C6D880;
+}
+
+#header .navbar li a:hover, #header .navbar li a.active {
+	border-top: 1px solid #2B7F27;
+	border-left: 1px solid #2B7F27;
+	border-right: 1px solid #2B7F27;
+	background-color: #ffffff;
+	color: #7BC477;
+}
+
+#header .navbar li a:hover {
+	text-decoration: underline;
+}
+
+.content, .listing {
+	width: 1024px;
+	margin: auto;
+}
+
+.content > div {
+	margin: 0.5em 0 0.5em 0;
+	padding: 0.5em 0.5em 2em 0.5em;
+	border-bottom: 1px dotted #C3C3C3;
+}
+
+.content .box {
+	margin: 1em 0.5em 1em 0.5em;
+	background: #F9F9F9;
+	border: 1px solid #C3C3C3;
+}
+
+.content .box h3 {
+	margin-top: 0;
+	padding: 0.5em 0.5em 0 0.5em;
+}
+.content .box .toggleEditing {
+	padding: 0.5em;
+	border-bottom: 1px dotted #C3C3C3;
+}
+
+/* table */
+table { width: 100%; margin: 0.5em; border: 1px solid #677ea0; }
+tr th{
+	text-transform: lowercase;
+	font-size: 110%;
+	margin: 0;
+	padding: 0.5em;
+	color: #213E68;
+	background: #a7b7cf url("img/th_bg.png") repeat-x;
+	border-left: 1px solid #dbe1eb;
+	border-right: 1px solid #677ea0;
+}
+tr td {
+	padding: 0.5em;
+	border-left: 1px solid #dbe1eb;
+	border-top: 1px solid #677ea0;
+}
+tr td:first-child {
+	width: 25%;
+}
+
+/* accordeon */
+.accordeon h3 { margin: 0; padding: 0; font-size: 100%; }
+
+.accordeon h3 a{
+	font-size: 110%;
+	display: block;
+	margin: 0;
+	padding: 0.7em;
+	color: #213E68;
+	background: #dadada url("img/accordeon_bg.png") repeat-x;
+	border-top: 1px solid #ececec;
+	border-left: 1px solid #ececec;
+	border-bottom: 1px solid #bbbbbb;
+	border-right: 1px solid #bbbbbb;
+}
+.accordeon h3 a:hover { text-decoration: underline; }
+.accordeon li { /*margin: 0.5em 0.3em 0.5em 0.3em;*/ border-bottom: 1px solid #ececec; }
+
+.accordeon li a {
+	display: block;
+	margin: 0.2em 0  0.2em 0;
+	padding: 0.2em;
+}
+.accordeon li a:hover {
+	background: #7BC477;
+	color: #ffffff;
+	text-decoration: none;
+}

@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web2.0 design</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.js"></script>
+<script type="text/javascript" src="js/jquery.scrollable.js"></script>
+
+<!-- code highlighting -->
+<script type="text/javascript" src="highlight/CodeHighlighter.js"></script>
+<!-- javascript -->
+<script type="text/javascript" src="highlight/javascript.js"></script> 
+<link href="highlight/javascript.css" rel="stylesheet" type="text/css" />
+<!-- lisp -->
+<script type="text/javascript" src="highlight/lisp.js"></script> 
+<link href="highlight/lisp.css" rel="stylesheet" type="text/css" />
+
+<SCRIPT language="Javascript"> 
+<!-- 
+$(document).ready( function () {
+	
+	$("div.scrollable").scrollable();
+	
+	// Hide sublists
+	$(".accordeon ul").hide();
+	
+	// Transform accordeon H3 into anchors
+	$(".accordeon h3").each( function () {
+        $(this).replaceWith('<h3><a href="#" title="toggle" class="toggle">' + $(this).text() + '</a></h3>');
+	});
+	
+	// Open clicked non-expanded listing
+	$(".accordeon h3").click( function () {
+		$(".accordeon ul:visible").each( function () {
+			$(this).slideUp("normal");
+		});
+		if ($(this).next("ul:visible").length != 0) {
+            $(this).next("ul").slideUp("normal");
+        } else {
+            $(this).next("ul").slideDown("normal");
+        }
+        return false;
+    });
+	
+	
+	$("#sortable1").tablesorter(); 
+	$("#sortable2").tablesorter(); 
+	
+	
+	//$(".listing").expandable();
+	//$(".accordion").accordion();
+	
+	// Package browsing
+	$(".listing .toggle").hide();
+	
+	$(".listing > h3").each( function () {
+        $(this).replaceWith('<h3><span><a href="#" title="toggle" class="toggle">' + $(this).text() + '</a></span></h3>');
+	});	
+
+	$(".listing > h3").click( function () {
+		if ($(this).prev(".toggle:visible").length != 0) {
+            $(this).prev(".toggle").slideUp("fast");
+        } else {
+            $(this).prev(".toggle").slideDown("fast");
+        }
+		$(this).toggleClass("open");
+        return false;
+    });
+	
+	$("#edit_form_01").click( function () {
+		var formDiv = $("#form_01");
+		if ( formDiv.hasClass("editFalse") ) {
+			formDiv.removeClass("editFalse");
+			formDiv.addClass("editTrue");
+			$("#form_01 select").removeAttr("disabled");
+			$("#form_01 h3").text("Form editTrue");
+		} else {
+			formDiv.removeClass("editTrue");
+			formDiv.addClass("editFalse");
+			$("#form_01 select").attr("disabled", true);
+			$("#form_01 h3").text("Form editFalse");
+		}
+	});
+	
+	
+	// Toggle editing
+	var editable = true;
+	
+	$(".editingTrue").hide();
+	
+	$(".toggleEditing").click( function() {
+		if ( !editable ) return false;
+		
+		$(".editingTrue:visible").each( function() {
+			$(this).hide();	
+		});
+		$(".editingFalse:hidden").each( function() {
+			$(this).show();	
+		});
+		
+		$(this).find(".editingTrue").show();
+		$(this).find(".editingFalse").hide();
+		return false;
+	});
+	
+	
+	$(".toggleButton .editTrue").hide();
+	
+	$(".toggleButton .editFalse").click( function() {
+		$(this).hide();
+		$(".toggleButton .editTrue").show();
+		editable = true;
+		return false;
+	});
+	$(".toggleButton .editTrue").click( function() {
+		$(this).hide();
+		$(".toggleButton .editFalse").show();
+		editable = false;
+		return false;
+	});
+
+});
+// --> 
+</SCRIPT>
+</head>
+<body>
+<div class="wrapper">
+	
+	<div id="header">
+		
+		<h1><span>l-doc</span></h1>
+		<h2><span>A delightful description pitch quote</span></h2>
+		
+		<div class="navbar">
+			<h3>Navigation</h3>
+			<ul class="mh">
+				<li><a href="/pkg/" class="active">packages</a></li>
+				<li><a href="#">classes</a></li>
+				<li><a href="#">functions</a></li>
+				<li><a href="#">macros</a></li>
+				<li><a href="#">variables</a></li>
+			</u>
+		</div>
+		
+		<form action="/search" method="get">
+			<input type="text" name="search" id="search" class="textfield" />
+			<button type="submit" class="search" >
+				search
+			</button>
+		</form>
+		
+		<hr />
+	</div><!-- end of header -->
+	
+	<div class="listing">
+		<div class="toggle">
+			<!-- navigator --> 
+			<div class="navi"></div>
+		
+			<!-- prev link --> 
+			<a class="prev"></a>
+		
+			<div class="scrollable">
+				<div class="items">
+					<div>
+						<h3>Classes</h3>
+						<ul>
+							<li><a href="#">Subitem 1</a></li>
+							<li><a href="#">Subitem 2</a></li>
+							<li><a href="#">Subitem 3</a></li>
+							<li><a href="#">Subitem 4</a></li>
+							<li><a href="#">Subitem 5</a></li>
+							<li><a href="#">Subitem 6</a></li>
+							<li><a href="#">Subitem 7</a></li>
+							<li><a href="#">Subitem 8</a></li>
+							<li><a href="#">Subitem 9</a></li>
+							<li><a href="#">Subitem 10</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3>&nbsp;</h3>
+						<ul>
+							<li><a href="#">Subitem 11</a></li>
+							<li><a href="#">Subitem 12</a></li>
+							<li><a href="#">Subitem 13</a></li>
+							<li><a href="#">Subitem 14</a></li>
+							<li><a href="#">Subitem 15</a></li>
+							<li><a href="#">Subitem 16</a></li>
+							<li><a href="#">Subitem 17</a></li>
+							<li><a href="#">Subitem 18</a></li>
+							<li><a href="#">Subitem 19</a></li>
+							<li><a href="#">Subitem 20</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3>&nbsp;</h3>
+						<ul>
+							<li><a href="#">Subitem 21</a></li>
+							<li><a href="#">Subitem 22</a></li>
+							<li><a href="#">Subitem 23</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3>Functions</h3>
+						<ul>
+							<li><a href="#">Subitem 1</a></li>
+							<li><a href="#">Subitem 2</a></li>
+							<li><a href="#">Subitem 3</a></li>
+							<li><a href="#">Subitem 4</a></li>
+							<li><a href="#">Subitem 5</a></li>
+							<li><a href="#">Subitem 6</a></li>
+							<li><a href="#">Subitem 7</a></li>
+							<li><a href="#">Subitem 8</a></li>
+							<li><a href="#">Subitem 9</a></li>
+							<li><a href="#">Subitem 10</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3>&nbsp;</h3>
+						<ul>
+							<li><a href="#">Subitem 11</a></li>
+							<li><a href="#">Subitem 12</a></li>
+							<li><a href="#">Subitem 13</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3>Macros</h3>
+						<ul>
+							<li><a href="#">Subitem 1</a></li>
+							<li><a href="#">Subitem 2</a></li>
+							<li><a href="#">Subitem 3</a></li>
+							<li><a href="#">Subitem 4</a></li>
+							<li><a href="#">Subitem 5</a></li>
+							<li><a href="#">Subitem 6</a></li>
+							<li><a href="#">Subitem 7</a></li>
+							<li><a href="#">Subitem 8</a></li>
+							<li><a href="#">Subitem 9</a></li>
+							<li><a href="#">Subitem 10</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3>&nbsp;</h3>
+						<ul>
+							<li><a href="#">Subitem 11</a></li>
+							<li><a href="#">Subitem 12</a></li>
+							<li><a href="#">Subitem 13</a></li>
+							<li><a href="#">Subitem 14</a></li>
+							<li><a href="#">Subitem 15</a></li>
+							<li><a href="#">Subitem 16</a></li>
+							<li><a href="#">Subitem 17</a></li>
+							<li><a href="#">Subitem 18</a></li>
+							<li><a href="#">Subitem 19</a></li>
+							<li><a href="#">Subitem 20</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3>&nbsp;</h3>
+						<ul>
+							<li><a href="#">Subitem 21</a></li>
+							<li><a href="#">Subitem 22</a></li>
+							<li><a href="#">Subitem 23</a></li>
+						</ul>
+					</div>
+				</div>
+			</div><!-- end of scrollable -->
+		
+			<!-- next link --> 
+			<a class="next"></a>
+			<hr clear="all" />
+		</div><!-- end of toggle -->
+		<h3><a href="">package content</a></h3>
+	</div>
+	
+	
+	<div class="content">
+		<div>
+			<div class="menubox">
+				<h3><a href="">ldoc</a> content</h3>
+				<div class="accordeon">
+					<h3>classes</h3>
+					<ul>
+						<li><a href="#">Subitem 1.1</a></li>
+						<li><a href="#">Subitem 1.2</a></li>
+						<li><a href="#">Subitem 1.3</a></li>
+					</ul>
+					<h3>functions</h3>
+					<ul>
+						<li><a href="#">Subitem 2.1</a></li>
+						<li><a href="#">Subitem 2.2</a></li>
+						<li><a href="#">Subitem 2.3</a></li>
+					</ul>
+					<h3>macros</h3>
+					<ul>
+						<li><a href="#">Subitem 3.1</a></li>
+						<li><a href="#">Subitem 3.2</a></li>
+						<li><a href="#">Subitem 3.3</a></li>
+					</ul>
+				</div>
+			</div><!-- end of menubox -->
+
+			<div class="contentbox">
+				<h1>Header 1</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <a href="#">incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis <a href="#">nostrud</a> exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+
+				<h2>Header 2</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <a href="#">incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis <a href="#">nostrud</a> exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+
+
+				<h3>Header 3</h3>
+
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <a href="#">incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis <a href="#">nostrud</a> exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+
+
+			</div><!-- end of contentbox -->
+			<hr />
+		</div><!-- end of box-->
+		
+		
+		
+		
+		
+		
+		<div>
+			<h1>Package <a href="">LDOC</a></h1>
+			<h2>Class <a href="">Phone</a></h2>
+			<p class="docstring">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+			
+			<h3>Methods</h3>
+			<table border="0" cellspacing="0" cellpadding="0" id="sortable1">
+				<thead>
+				<tr><th>Name</th>
+					<th>Docstring</th>
+				</tr>
+				</thead> 
+				<tbody>
+				<tr><td><a href="#" class="code">Method 1</a></td>
+					<td><p class="docstring">Lorem ipsum dolor sit amet</p></td>
+				</tr>
+				<tr><td><a href="#" class="code">Method 2</a></td>
+					<td><p class="docstring">consectetur adipisicing elit</p></td>
+				</tr>
+				<tr><td><a href="#" class="code">Method 3</a></td>
+					<td><p class="docstring">sed do eiusmod tempor incididunt ut labore</p></td>
+				</tr>
+				</tbody>
+			</table>
+			
+			<h3>Slots</h3>
+			<table border="0" cellspacing="0" cellpadding="0" id="sortable2">
+				<thead>
+				<tr><th>Name</th>
+					<th>Docstring</th>
+				</tr>
+				</thead> 
+				<tbody>
+				<tr><td><a href="#" class="code">Slot 1</a></td>
+					<td><p class="docstring">Lorem ipsum dolor sit amet</p></td>
+				</tr>
+				<tr><td><a href="#" class="code">Slot 2</a></td>
+					<td><p class="docstring">consectetur adipisicing elit</p></td>
+				</tr>
+				<tr><td><a href="#" class="code">Slot 3</a></td>
+					<td><p class="docstring">sed do eiusmod tempor incididunt ut labore</p></td>
+				</tr>
+				</tbody>
+			</table>
+			
+			<h3>Superclasses</h3>
+
+			<ul>
+				<li><a href="#">class</a></li>
+				<li><a href="#">super_class</a></li>
+				<li><a href="#">super_super_class</a></li>
+			</ul>
+			<hr />
+
+			<h3>Subclasses</h3>
+
+			<ul>
+				<li><a href="#">sub_class_a</a></li>
+				<li><a href="#">sub_class_b</a></li>
+			</ul>
+			<hr />
+			
+		</div>	<!-- end of box-->
+
+
+
+
+
+		<div>
+			<h2><a href="">Phone</a> Methods</h2>
+			<div class="box">
+				<h3 id="METHOD_PRODUCE-OUTPUT" class="code">PRODUCE-OUTPUT</h3>
+
+				<div class="toggleEditing">
+					<div class="editingFalse">
+						<strong>docstring</strong>
+						<p>This is some documentation for the filter class!</p>
+					</div>
+					<div class="editingTrue">
+						<input type="text" class="textfield" value="docstring" />
+						<textarea name="doc-content" >This is some documentation for the filter class!</textarea>
+					</div>
+					<a href="#" class="edit">edit</a>
+				</div>
+
+				<div class="toggleEditing">
+					<div class="editingFalse">
+						<strong>example</strong>
+						<p>(lambda (x y)  (print (+ x y)))</p>
+					</div>
+					<div class="editingTrue">
+						<input type="text" class="textfield" value="example" />
+						<textarea name="doc-content" >(lambda (x y)  (print (+ x y)))</textarea>
+					</div>
+					<a href="#" class="edit">edit</a>
+				</div>
+
+				<div class="toggleEditing">
+					<div class="editingFalse">
+						<strong>test-run</strong>
+						<p>(assert T ((+ x y)) (3 4))</p>
+					</div>
+					<div class="editingTrue">
+						<input type="text" class="textfield" value="test-run" />
+						<textarea name="doc-content" >(assert T ((+ x y)) (3 4))</textarea>
+					</div>
+					<a href="#" class="edit">edit</a>
+				</div>
+				<div class="toggleEditing newEditing">
+					<a href="#" class="edit">new</a>
+				</div>
+			</div><!-- end of box-->
+
+			<div class="box">			
+				<h3 id="METHOD_PRECEDENCE-FILTER-LIST" class="code">PRECEDENCE-FILTER-LIST</h3>
+
+				<div class="toggleEditing">
+					<div class="editingFalse">
+						<strong>docstring</strong>
+						<p>The precedence list of a filter is all the filter that are needed before this one is called also called parent. All the parent filters are put in a list from the first ancestor up to the last filter.</p>
+					</div>
+					<div class="editingTrue">
+						<input type="text" class="textfield" value="docstring" />
+						<textarea name="doc-content" >The precedence list of a filter is all the filter that are needed before this one is called also called parent. All the parent filters are put in a list from the first ancestor up to the last filter.</textarea>
+					</div>
+					<a href="#" class="edit">edit</a>
+				</div>
+
+				<div class="toggleEditing">
+					<div class="editingFalse">
+						<strong>example</strong>
+						<p>(lambda (x y)  (print (+ x y)))</p>
+					</div>
+					<div class="editingTrue">
+						<input type="text" class="textfield" value="example" />
+						<textarea name="doc-content" >(lambda (x y)  (print (+ x y)))</textarea>
+					</div>
+					<a href="#" class="edit">edit</a>
+				</div>
+
+				<div class="toggleEditing">
+					<div class="editingFalse">
+						<strong>test-run</strong>
+						<p>(assert T ((+ x y)) (3 4))</p>
+					</div>
+					<div class="editingTrue">
+						<input type="text" class="textfield" value="test-run" />
+						<textarea name="doc-content" >(assert T ((+ x y)) (3 4))</textarea>
+					</div>
+					<a href="#" class="edit">edit</a>
+				</div>
+				<div class="toggleEditing newEditing">
+					<a href="#" class="edit">new</a>
+				</div>
+			</div><!-- end of box-->
+
+			<div class="box">			
+				<h3 class="code">Method 3</h3>
+				
+				<div class="toggleEditing newEditing">
+					<a href="#" class="edit">new</a>
+				</div>
+			</div><!-- end of box-->
+		</div>
+
+
+
+
+
+		<div>
+			<h2><a href="">Phone</a> Slots</h2>
+			<div class="box">			
+				<h3 class="code">Slot 1</h3>
+
+				<div class="toggleEditing newEditing">
+					<a href="#" class="edit">new</a>
+				</div>
+			</div><!-- end of box-->
+			
+			<div class="box">			
+				<h3 class="code">Slot 2</h3>
+
+				<div class="toggleEditing newEditing">
+					<a href="#" class="edit">new</a>
+				</div>
+			</div><!-- end of box-->
+			
+			<div class="box">			
+				<h3 class="code">Slot 3</h3>
+
+				<div class="toggleEditing newEditing">
+					<a href="#" class="edit">new</a>
+				</div>
+			</div><!-- end of box-->
+		</div>
+
+
+
+
+
+		<div>
+			<h2><a href="">ldoc</a> functions</h2>
+			
+			<table border="0" cellspacing="0" cellpadding="0" id="sortable2">
+				<thead>
+				<tr><th>Function</th>
+					<th>Docstring</th>
+				</tr>
+				</thead> 
+				<tbody>
+				<tr><td><a href="#" class="code">order-query</a></td>
+					<td><p class="docstring">Lorem ipsum dolor sit amet</p></td>
+				</tr>
+				<tr><td><a href="#" class="code">initialiseLinks</a></td>
+					<td><p class="docstring">consectetur adipisicing elit</p></td>
+				</tr>
+				</tbody>
+			</table>
+			
+		</div>
+		<div>
+			<h2><a href="">ldoc</a> functions</h2>
+			
+			<div class="box">
+				<h3 class="code"><a href="">order-query</a></h3>
+				
+				<div class="toggleEditing">
+					<div class="editingFalse">
+						<strong>docstring</strong>
+						<p>Lorem ipsum dolor sit amet</p>
+					</div>
+					<div class="editingTrue">
+						<input type="text" class="textfield" value="docstring" />
+						<textarea name="doc-content" >Lorem ipsum dolor sit amet</textarea>
+					</div>
+					<a href="#" class="edit">edit</a>
+				</div>
+				
+				<div class="toggleEditing">
+<strong>example</strong>			
+<pre class="code">
+<code class="lisp">
+;;; This code order a query from an ordering function
+(defmethod order-query ((query Query) (order Ordering))
+  "Loop over the result set of the query and apply each function of the 
+ordering to put result in a new list preceded by its keyword"
+  (let ( (res (init-ordering order)) )
+    (with-slots (entries) order
+      (loop for elt in (result query)
+	 do (loop for entry in entries
+	       when (funcall (first entry) elt)
+	       do (return (push elt (getf res (second entry)))))))
+    (setf (result query) res)
+    query))
+</code>
+</pre>
+					<a href="#" class="edit">edit</a>
+				</div>
+			</div><!-- end of box-->
+
+			<div class="box">
+				<h3 class="code"><a href="">initialiseLinks</a></h3>
+				
+				<div class="toggleEditing">
+					<div class="editingFalse">
+						<strong>docstring</strong>
+						<p>consectetur adipisicing elit</p>
+					</div>
+					<div class="editingTrue">
+						<input type="text" class="textfield" value="docstring" />
+						<textarea name="doc-content" >consectetur adipisicing elit</textarea>
+					</div>
+					<a href="#" class="edit">edit</a>
+				</div>
+				
+				<div class="toggleEditing">
+<strong>example</strong>
+<pre class="code">
+<code class="javascript">
+/*
+This script detects external links in a page
+and attaches a behaviour to them so they open
+in a external window.
+*/
+function initialiseLinks() {
+    if (document.getElementsByTagName) {
+        var links = document.getElementsByTagName("A");
+        for (var i = 0; i < links.length; i++) {
+            if (links[i].href.indexOf("http:")==0) {
+                // if the links URL starts with http: then we assume it's an external link
+                links[i].onclick = function() {
+                    window.open(this.href);
+                    return false; // stop normal link behaviour
+                }
+            }
+        }
+    }
+}
+
+window.onload = initialiseLinks();
+</code>
+</pre>
+				<a href="#" class="edit">edit</a>
+			</div>
+		</div><!-- end of box-->
+		
+		
+		
+		
+		<div>
+		<form action="#" method="post" class="editFalse" id="form_01">
+			<h1>Form</h1>
+			
+			<label for="doc-type-name">
+				Textfield:
+				<input type="text" name="doc-type-name" class="textfield" value="Some documentation string" />
+			</label>
+			
+			<label for="doc-type">
+				Selection:
+				<select name="doc-type">
+					<option value="docstring" >docstring</option>
+					<option value="tutorial" selected>tutorial</option>
+					<option value="example">example</option>
+				</select>
+			</label>
+			
+			<label for="doc-content">
+				Textarea:
+				<textarea name="doc-content" >Some documentation string value</textarea>
+			</label>
+			
+			<div>
+				<p>Buttons:</p>
+				<button type="submit" class="save">
+					<!-- <img src="/css/img/icons/drive_add.png"> -->
+					save
+				</button>
+			
+				<button type="submit" class="edit">
+					<!-- <img src="/css/img/icons/pencil.png"> -->
+					edit
+				</button>
+			
+				<a href="#" class="button">
+					<!-- <img src="/css/img/icons/pencil.png"> -->
+					edit a
+				</a>
+			
+				<a href="#" class="button">
+					save &amp; new a
+				</a>
+			</div>
+			
+		</form>
+		</div><!-- end of box-->
+
+
+
+	</div><!-- end of content -->
+
+
+	<div id="footer">
+		<p>Lively documentation</p>
+	</div>
+
+</div><!-- end of body-wrapper -->
+</body>

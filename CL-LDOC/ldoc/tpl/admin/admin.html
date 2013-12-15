@@ -1,0 +1,105 @@
+<!-- TMPL_INCLUDE 'header.html' -->
+
+<div id="content">
+
+	<h1>Administration</h1>
+
+	<div class="accordion">
+
+		<h2>General options</h2>
+		<div class="toggle">
+			<form action="?option-handler" method="post">
+				<fieldset>
+					<legend>Modify general documentation options</legend>
+					<!-- TMPL_LOOP options -->
+					<label for="<!-- TMPL_VAR name -->">
+						<input id="<!-- TMPL_VAR name -->" type="checkbox" name="option" value="<!-- TMPL_VAR name -->" <!-- TMPL_IF value -->checked="checked"<!-- /TMPL_IF --> />
+						<!-- TMPL_VAR description -->
+					</label>
+					<!-- /TMPL_LOOP -->
+				</fieldset>
+				<div class="bbar action">
+					<button type="submit" name="save" value="save" class="save">save changes</button>
+				</div>
+			</form>
+		</div><!-- end of toggle -->
+
+		<h2>Tags</h2>
+		<div class="toggle">
+			<form action="?tag-handler" method="post" class="tagChoice tag-handler">
+				<fieldset>
+					<legend>Add a tag to the system</legend>
+					<label for="newTag">
+						<span>Tag name: </span>
+						<input id="newTag" type="text" name="tag" value=""/>
+					</label>
+					<label for="parent">
+						<span>Parent tag: </span>
+						<select id="parent" name="parent">
+							<!-- TMPL_LOOP all-tags -->
+							<optgroup label="<!-- TMPL_VAR name -->">
+								<!-- TMPL_LOOP children -->
+								<option value="<!-- TMPL_VAR name -->"><!-- TMPL_VAR name --></option>
+								<!-- /TMPL_LOOP -->
+							</optgroup>
+							<!-- /TMPL_LOOP -->
+						</select>
+					</label>
+				</fieldset>
+				<div class="bbar action">
+					<button type="submit" name="save" value="save" class="save">submit tag</button>
+				</div>
+			</form>
+		</div><!-- end of toggle -->
+		
+		
+		<h2>Tutorial</h2>
+		<div class="toggle">
+			<form id="create-tutorial" action="?tutorial-handler" method="post">
+
+			<input type="hidden" name="uri" value="admin" />
+
+			<fieldset>
+				<legend>Tutorial</legend>
+				<label for="name">
+					Name:
+					<input type="text" name="tutorial-name" value="" />
+				</label>
+			</fieldset>
+
+			<div class="clonable-wrapper">
+
+				<div class="factory-clonable">
+					<fieldset>
+						<legend>Section</legend>
+						<label for="name">
+							Name:
+							<input type="text" name="name" value="" />
+						</label>
+						<label for="ref">
+							Entity:
+							<input type="text" name="ref" value="" />
+						</label>
+						<label for="comment">
+							<p>Comment:</p>
+							<textarea name="comment"><!-- TMPL_VAR comment --></textarea>
+						</label>
+					</fieldset>
+				</div><!-- end of factory-clonable -->
+
+
+			</div><!-- end of clonable-wrapper -->
+
+			<div class="bbox action">
+				<button type="submit" class="save" >
+					<img src="/media/img/icons/save.png">
+					save tutorial
+				</button>
+			</div>
+
+			</form>
+		</div>
+	</div><!-- end of accordion -->
+</div><!-- end of content -->
+
+<!-- TMPL_INCLUDE 'footer.html' -->

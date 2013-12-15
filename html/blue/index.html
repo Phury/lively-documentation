@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wireframe</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="../webroot/js/jquery.js"></script>
+<SCRIPT language="Javascript"> 
+<!-- 
+$(document).ready( function () {
+	
+	// Hide sublists
+	$(".subList").hide();
+	
+	// Transform expandTrue spans into anchors
+	$(".listing span.toggle").each( function () {
+	    var textValue = $(this).text();
+        //$(this).replaceWith('<a href="#" title="Edit" class="toggle"><span>[+]</span></a>');
+		$(this).replaceWith('<a href="#" title="Edit" class="toggle"><img src="css/img/toggle_down2.png" /></a>');
+	});
+	
+	// Open clicked non-expanded listing
+	$(".listing .toggle").click( function () {
+		if ($(this).prev("ul:visible").length != 0) {
+            $(this).prev("ul").slideUp("normal");
+			$(this).html('<img src="css/img/toggle_down2.png" />');
+        } else {
+            $(this).prev("ul").slideDown("normal");
+			$(this).html('<img src="css/img/toggle_up2.png" />');
+        }
+        return false;
+    });
+	
+	
+	// Transform disabled select into disabled input
+	/*$("form.editFalse select").each( function () {
+		var selected = $(this).children(":selected");
+		$(this).replaceWith('<input type="text" name="doc-type" class="textfield" value="' + selected.text() + '" disabled />');
+	});*/
+	
+	//$("#form_01").addClass("editTrue");
+	
+	$("#edit_form_01").click( function () {
+		var formDiv = $("#form_01");
+		if ( formDiv.hasClass("editFalse") ) {
+			formDiv.removeClass("editFalse");
+			formDiv.addClass("editTrue");
+			$("#form_01 select").removeAttr("disabled");
+			$("#form_01 h3").text("Form editTrue");
+		} else {
+			formDiv.removeClass("editTrue");
+			formDiv.addClass("editFalse");
+			$("#form_01 select").attr("disabled", true);
+			$("#form_01 h3").text("Form editFalse");
+		}
+	});
+
+});
+// --> 
+</SCRIPT>
+</head>
+<body>
+<div class="wrapper">
+	
+	<div id="header">
+		
+		<h1><span>Lively Documentation</span></h1>
+		<h2><span>A delightful description pitch quote</span></h2>
+		
+		<div class="navbar">
+			<h3>Navigation</h3>
+			<ul class="mh">
+				<li><a href="/pkg/" class="active">packages</a></li>
+				<li><a href="#">classes</a></li>
+				<li><a href="#">functions</a></li>
+				<li><a href="#">macro</a></li>
+				<li><a href="#">symbol</a></li>
+			</u>
+		</div>
+		
+		<form action="/search" method="get">
+			<input type="text" name="search" id="search" class="textfield" />
+			<button type="submit" class="search" >
+				search
+			</button>
+		</form>
+		
+		<hr />
+	</div><!-- end of header -->
+	
+	
+	<div class="content">
+		
+		<form action="#" method="post" class="editFalse" id="form_01">
+			
+			<h3>Form editFalse</h3>
+			
+			<label for="doc-type-name">
+				Textfield:
+				<input type="text" name="doc-type-name" class="textfield" value="Some documentation string" disabled />
+			</label>
+			
+			<label for="doc-type">
+				Selection:
+				<select name="doc-type" disabled="disabled" >
+				<option value="docstring" >docstring</option>
+				<option value="tutorial" selected>tutorial</option>
+				<option value="example">example</option>
+				</select>
+			</label>
+			
+			<label for="doc-content">
+				Textarea:
+				<textarea name="doc-content" disabled >Some documentation string value</textarea>
+			</label>
+			
+			<div>
+				<p>Buttons:</p>
+				<button type="submit" class="save">
+					<img src="/css/img/icons/drive_add.png">
+					save submit
+				</button>
+			
+				<button type="submit" class="edit">
+					<img src="/css/img/icons/pencil.png">
+					edit submit
+				</button>
+			
+				<a href="#" class="button">
+					<img src="/css/img/icons/pencil.png">
+					edit anchor
+				</a>
+			
+				<a href="#" class="button">
+					save &amp; new anchor
+				</a>
+			</div>
+			
+			<label for="edit-form">
+				Edit form:
+				<button type="button" class="edit" id="edit_form_01" name="edit-form">
+					<img src="/css/img/icons/pencil.png">
+					edit
+				</button>
+			</label>
+			
+		</form>
+		
+		
+		<div id="class-description" class="editFalse">
+			<h2>Class <a href="#">Name</a></h2>
+			<p class="docstring">Some docstring for the class</p>
+
+			<div class="box">
+				<h3>Slots</h3>
+				<dl>
+					<dt class="code"><a href="">A_SLOT</a></dt>
+					<dd>
+						<p class="docstring">A SLOT documentation</p>
+					</dd>
+				</dl>
+				<dl class="odd">
+					<dt class="code"><a href="">A_SLOT</a></dt>
+					<dd>
+						<p class="docstring">A SLOT documentation</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt class="code"><a href="">A_SLOT</a></dt>
+					<dd>
+						<p class="docstring">A SLOT documentation</p>
+					</dd>
+				</dl>
+			</div>
+
+			<div class="box">	
+				<h3>Methods</h3>
+				<dl>
+					<dt class="code"><a href="">A_METHOD</a></dt>
+					<dd>
+						<p class="docstring">A METHOD documentation</p>
+					</dd>
+				</dl>
+				<dl class="odd">
+					<dt class="code"><a href="">A_METHOD</a></dt>
+					<dd>
+						<p class="docstring">A METHOD documentation</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt class="code"><a href="">A_METHOD</a></dt>
+					<dd>
+						<p class="docstring">A METHOD documentation</p>
+					</dd>
+				</dl>
+			</div>
+
+			<div class="box">
+				<h4>Superclasses</h4>
+
+				<ul class="mh">
+					<li><a href="#">class</a></li>
+					<li><a href="#">super_class</a></li>
+					<li><a href="#">super_super_class</a></li>
+				</ul>
+				<hr />
+			</div>
+
+			<div class="box">
+				<h4>Subclasses</h4>
+
+				<ul class="mh">
+					<li><a href="#">sub_class_a</a></li>
+					<li><a href="#">sub_class_b</a></li>
+				</ul>
+				<hr />
+			</div>
+
+			<div class="box">
+				<button type="submit" class="edit">
+					<img src="/css/img/icons/pencil.png">
+					edit
+				</button>
+			</div>
+		</div><!-- end of class description -->
+		
+		
+		<div id="package-description" class="gr7">
+			
+			<div class="cell">
+				<h2><span>Packages</span></h2>
+
+				<ul class="listing">
+
+					<li><a href="/pkg/?ALEXANDRIA.0.DEV">ALEXANDRIA.0.DEV</a></li>
+
+					<li><a href="/pkg/?ASDF">ASDF</a></li>
+
+					<li><a href="/pkg/?BABEL">BABEL</a></li>
+
+					<li><a href="/pkg/?BABEL-ENCODINGS">BABEL-ENCODINGS</a></li>
+
+					<li><a href="/pkg/?CFFI">CFFI</a></li>
+
+					<li class="toggleSubList">
+						<ul class="subList">
+							<li><a href="/pkg/?CFFI-FEATURES">CFFI-FEATURES</a></li>
+
+							<li><a href="/pkg/?CFFI-SYS">CFFI-SYS</a></li>
+
+							<li><a href="/pkg/?CHUNGA">CHUNGA</a></li>
+
+							<li><a href="/pkg/?CL+SSL">CL+SSL</a></li>
+
+							<li><a href="/pkg/?CL+SSL-SYSTEM">CL+SSL-SYSTEM</a></li>
+
+							<li><a href="/pkg/?CL-BASE64">CL-BASE64</a></li>
+						</ul>
+					<span class="toggle">expand</span>
+					</li>
+					
+				</ul>
+			</div><!-- end of cell -->
+			
+			
+			<div class="cell">
+				<h2><span>Methods</span></h2>
+
+				<ul class="listing">
+
+					<li><a href="/pkg/?ALEXANDRIA.0.DEV">ALEXANDRIA.0.DEV</a></li>
+
+					<li><a href="/pkg/?ASDF">ASDF</a></li>
+
+					<li><a href="/pkg/?BABEL">BABEL</a></li>
+
+					<li><a href="/pkg/?BABEL-ENCODINGS">BABEL-ENCODINGS</a></li>
+
+					<li><a href="/pkg/?CFFI">CFFI</a></li>
+
+					<li class="toggleSubList">
+						<ul class="subList">
+							<li><a href="/pkg/?CFFI-FEATURES">CFFI-FEATURES</a></li>
+
+							<li><a href="/pkg/?CFFI-SYS">CFFI-SYS</a></li>
+
+							<li><a href="/pkg/?CHUNGA">CHUNGA</a></li>
+
+							<li><a href="/pkg/?CL+SSL">CL+SSL</a></li>
+
+							<li><a href="/pkg/?CL+SSL-SYSTEM">CL+SSL-SYSTEM</a></li>
+
+							<li><a href="/pkg/?CL-BASE64">CL-BASE64</a></li>
+						</ul>
+					<span class="toggle">expand</span>
+					</li>
+
+				</ul>
+			</div><!-- end of cell -->
+			
+			
+			
+			<div class="cell">
+				<h2><span>Macros</span></h2>
+
+				<ul class="listing">
+
+					<li><a href="/pkg/?ALEXANDRIA.0.DEV">ALEXANDRIA.0.DEV</a></li>
+
+					<li><a href="/pkg/?ASDF">ASDF</a></li>
+
+					<li><a href="/pkg/?BABEL">BABEL</a></li>
+
+					<li><a href="/pkg/?BABEL-ENCODINGS">BABEL-ENCODINGS</a></li>
+
+					<li><a href="/pkg/?CFFI">CFFI</a></li>
+
+					<li class="toggleSubList">
+						<ul class="subList">
+							<li><a href="/pkg/?CFFI-FEATURES">CFFI-FEATURES</a></li>
+
+							<li><a href="/pkg/?CFFI-SYS">CFFI-SYS</a></li>
+
+							<li><a href="/pkg/?CHUNGA">CHUNGA</a></li>
+
+							<li><a href="/pkg/?CL+SSL">CL+SSL</a></li>
+
+							<li><a href="/pkg/?CL+SSL-SYSTEM">CL+SSL-SYSTEM</a></li>
+
+							<li><a href="/pkg/?CL-BASE64">CL-BASE64</a></li>
+						</ul>
+					<span class="toggle">expand</span>
+					</li>
+
+				</ul>
+			</div><!-- end of content -->
+			
+			<hr />
+		</div><!-- end of package-description -->
+		
+		
+	</div><!-- end of content -->
+	
+	
+
+	<div id="footer">
+		<p>Lively documentation</p>
+	</div>
+
+</div><!-- end of body-wrapper -->
+</body>
+</html>

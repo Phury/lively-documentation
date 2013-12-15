@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Editor Demo</title>
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.wrapper {
+	margin: 1em;
+	padding: 1em;
+	background-color: #F5F5F5;
+	border: 1px solid #CCCCCC;
+}
+.mod {
+	
+}
+.mod .editable, .mod .newEditable {
+	margin: 0.5em;
+	padding: 0.5em;
+	border-bottom: 1px dotted #C3C3C3;
+}
+
+p.name {
+	font-weight: bold;
+	font-size: 110%;	
+}
+p.type { display: none; }
+
+a { padding-right: 0.5em; }
+
+/****** EDITOR ******/
+.editor {
+	margin: 1em;
+	padding: 0.5em;
+	/*background-color: #E5E5E5;*/
+}
+.editor label {
+	font-family: serif;
+	font-size: 110%;
+	text-transform: capitalize;
+	margin-top: 0.2em;
+}
+.editor input { margin-right: 1em; }
+.editor select, .editor input, .editor textarea {
+	font-family: serif;
+	font-size: 100%;
+}
+.editor input, .editor textarea { font-size: 100%; }
+.editor input { 
+	padding: 0.2em;
+	border: 1px solid #999999;
+	width: 50%;
+}
+.editor textarea {
+	width: 99%;
+	height: 15em;
+	margin: 0.5em 0 0.5em 0;
+	padding: 0.2em;
+	border: 1px solid #999999;
+}
+.editor select {
+	margin-right: 0.5em;
+}
+
+
+
+
+</style>
+
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/editor.jquery.js"></script>
+<script type="text/javascript" src="js/editable.js"></script>
+
+
+<script language="Javascript"> 
+<!-- 
+
+$(document).ready( function () {
+	
+	initEditable();
+	$('.editable').editor({visible: true});
+	
+	// Display result that will be posted
+	$('form > button.save').click( function() {
+		var result = "";
+		$('.editable').each( function() {
+			
+			result += 'Entry :\n';
+			$(this).find('p').each( function() {
+				result += '\t' + $(this).attr('class') + ': ' + $(this).text() + '\n';
+			});
+			
+		});
+		alert( result );
+		return false;
+	});
+	
+});
+
+// --> 
+</script>
+
+
+</head>
+<body>
+<div class="wrapper">
+	<form method="post" action="submit">
+		
+		<div class="mod">
+			<h3>Function FOOBAR</h3>
+				
+			<div id="FOOBAR" class="editable-wrapper">
+				
+				<div class="editable">
+					<p class="name">docstring</p>
+					<p class="value">The method foobar prints foobar on the standard output</p>
+					<p class="type">text</p>
+					<div class="editor"></div>
+					<a href="#FOOBAR" class="edit">edit</a><a href="#FOOBAR" class="delete" onclick="delEditable(this);">delete</a>
+				</div><!-- end of editable -->
+			
+			</div><!-- end of editable-wrapper -->
+			
+			<div class="newEditable">
+				<a href="#" class="new" onclick="addEditable('FOOBAR');">new</a>
+			</div>
+				
+		</div><!-- end of box -->
+		<button type="submit" class="save">save modifications</button>
+		
+	</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+
+<!-- TMPL_IF title --><h3><!-- TMPL_VAR title --></h3><!-- /TMPL_IF -->
+<div class="tasks">
+	<ul><!-- TMPL_LOOP items -->
+		<li>
+			<a href="?<!-- TMPL_VAR uri -->"><!-- TMPL_VAR name --></a> <span><!-- TMPL_VAR type --></span>
+			<p><!-- TMPL_VAR task --></p>
+		</li><!-- /TMPL_LOOP -->
+	</ul>
+</div>

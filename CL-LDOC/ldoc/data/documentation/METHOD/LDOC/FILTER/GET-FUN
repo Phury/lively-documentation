@@ -1,0 +1,4 @@
+("tag" "text" "todo")
+("tag" "text" "METHOD")
+("todo" "text" "Make a method of the object and force subclassing")
+("docstring" "text" "Change name, generated getters do not start with get")

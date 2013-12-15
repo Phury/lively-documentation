@@ -1,0 +1,7 @@
+
+<div id="navbar">
+	<h3><!-- TMPL_VAR title --></h3>
+	<ul><!-- TMPL_LOOP items -->
+		<li><a <!-- TMPL_IF active -->class="<!-- TMPL_VAR active -->"<!-- /TMPL_IF --> href="?<!-- TMPL_VAR name -->"><!-- TMPL_VAR name --></a></li><!-- /TMPL_LOOP -->
+	</ul>
+</div><!-- end of navbar -->

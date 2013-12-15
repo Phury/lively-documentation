@@ -1,0 +1,9 @@
+("tag" "text" "slot")("tag" "text" "printing")("tag" "text" "private")("tag"
+                                                                       "text"
+                                                                       "todo")("example"
+                                                                               "code"
+                                                                               "(let ((fun (lambda (x y)  (print (+ x y))) )) (funcall fun 2 5))")("test-run"
+                                                                                                                                                   ""
+                                                                                                                                                   "(assert T ((+ x y)) (3 4))4))")("todo"
+                                                                                                                                                                                    ""
+                                                                                                                                                                                    "Document more precisely")

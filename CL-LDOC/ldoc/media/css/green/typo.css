@@ -1,0 +1,49 @@
+body {
+	font-family: "Lucida Grande", sans-serif;
+	font-size: 0.9em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #444444;
+	font-weight: lighter;
+	text-transform: capitalize;
+	letter-spacing: -1px;
+}
+
+h1 { font-size: 200%; }
+h2 { font-size: 175%; }
+h3 { font-size: 150%; }
+h4 { font-size: 125%; }
+
+h4 { margin-top: 1em; }
+
+a {
+	text-decoration: none;
+	font-family: serif;
+	color: #39B54A;
+}
+a:hover { text-decoration: underline; }
+a.code { font-family: "Monaco", sans-serif; }
+
+
+p { line-height: 1.2em; }
+.hidden { display: none; }
+p.docstring {
+	font-family: serif;
+	font-style: italic;
+}
+pre {
+	font-family: "Monaco", "Courier";
+	font-size: 80%;
+	line-height: 1.2em;
+	margin-bottom: 0.5em;
+	/*margin: 0.5em 0.5em 0.5em 1em;*/
+}
+
+input, textarea, select { 
+	font-family: "Monaco", "Courier";
+	font-size: 80%;
+}
+.center {
+	text-align: center;
+}

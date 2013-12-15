@@ -1,0 +1,6 @@
+("docstring" NIL "A docstring for tree!!!")
+("example" NIL "(defmethod save-edited-doc ((page EditClassPage) parsed-doc)
+  (loop for key in (key-set parsed-doc)
+     do (put-file-documentation 
+	 (make-identifiable key)
+	 (get-value parsed-doc key))))")

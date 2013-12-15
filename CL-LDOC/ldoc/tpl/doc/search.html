@@ -1,0 +1,35 @@
+<!-- TMPL_INCLUDE 'header.html' -->
+
+<div id="content">
+	
+	<h1>Search results</h1>
+	
+	<div class="listing big">
+		<h2>tagged in: 
+			<!-- TMPL_LOOP tag-list -->
+			<a href="?search/tag/<!-- TMPL_VAR tag -->"><!-- TMPL_VAR tag --></a>
+			<!-- /TMPL_LOOP -->
+			
+			<!-- TMPL_IF related -->
+			<span class="related">
+				related:
+				<!-- TMPL_LOOP related -->
+				<a href="?search/tag/<!-- TMPL_VAR tag -->"><!-- TMPL_VAR tag --></a>
+				<!-- /TMPL_LOOP -->
+			</span>
+			<!-- /TMPL_IF -->
+		</h2>
+				
+		<div class="tasks">
+		<ul><!-- TMPL_LOOP tagged -->
+			<li>
+				<a href="?<!-- TMPL_VAR uri -->"><!-- TMPL_VAR name --></a>
+				<!-- TMPL_IF docstring --><p class="docstring"><!-- TMPL_VAR docstring --></p><!-- /TMPL_IF -->
+			</li><!-- /TMPL_LOOP -->
+		</ul>
+		</div>
+	</div><!-- end of alpha -->
+	
+</div>
+
+<!-- TMPL_INCLUDE 'footer.html' -->

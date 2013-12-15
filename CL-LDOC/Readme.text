@@ -1,0 +1,78 @@
+Lively Documentation
+====================
+
+Version 1.0.0 - Mon 1 Jun 2009
+
+by Pierre-Henri Van de Velde  
+<pierre-henri.vandevelde@student.uclouvain.be>
+
+About
+-----
+Lively documentation is a documentation system that allows you to comment your program entities as the code is running. For more information see "Lively documentation: A dynamic annotation system for Agile development"
+
+### Abstract ###
+> A great problem with Agile development is that the documentation process is usually put aside, yet good documentation is key to usability and maintainability of software. This is why my thesis presents a new methodology that includes the documentation process in the agile development methodology. The key feature to the elaboration of this new methodology is the implementation of a new software that allows developers to annotate code entities such as classes, methods, and so on, with tags, examples, documentation, test-runs. It allows easy searching and structuring of the documentation. It is for example possible to retrieve all entities that have been tagged as "undocumented" or classified in a specific section. Examples and tests can be executed directly from the software to see the results. All these features make it easier to realize a documentation process that blends naturally with Agile programming techniques.
+
+### Info ###
+An HTML version of this file can be generated with markdown
+
+Installation
+------------
+
+### Notes ###
+*   Lively documentation requires hunchentoot-0.15.7 to work properly, it
+    is not working with the current hunchentoot-1.x versions. A working
+    version of hunchentoot-0.15.7 is provided with the sources. It must be
+    installed manually in your system.
+    
+*   Lively documentation requires SBCL compiled with thread support, this
+    is not the case for the pre-compiled versions available on internet.
+    You will have to compile SBCL manually with thread support.
+
+### Steps ###
+
+1.  Get a fresh copy of SBCL sources and compile it with thread support
+  
+2.  Install hunchentoot-0.15.7
+
+3.  Install HTML-TEMPLATE with asdf
+
+4.  Edit "config.lisp". It contains variables like the location of the 
+    application, the port of the web server etc. Normally you should only
+    change the root directory for the application to 
+    "*wathever*/CL-LDOC/ldoc"
+  
+5.  Launch your favorite Lisp editor and load the asdf package "ldoc.asd".
+    It should compile everything without errors.  
+
+6.  Go in package LDOC
+    > (in-package :ldoc)
+7.  Execute the configuration of the server.
+    > (configure)
+
+8.  Run the server
+    > (run-server)  
+
+9.  Pick your favorite web-browser and navigate to
+    [localhost:8080](http://localhost:8080/)
+    (depends on the port you choose)
+
+10. Have fun!
+
+
+Content
+-------
+*  __config.lisp__ Contains the configuration to run the program
+
+*  __core__ Contains the source files for the core of the system
+
+*  __extensions__ Contains extensions like markdown files and test-units
+
+*  __ldoc__ Contains all the folder for the lively documentation 
+   implementation
+
+*  __ldoc.asd__ Asdf package to load the system
+
+*  __future__ Folder that contains code for future versions
+
+*  __Readme.text__ This file

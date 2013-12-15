@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lively documentation</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="/js/jquery.js"></script>
+
+<SCRIPT language="Javascript"> 
+<!-- 
+$(document).ready( function () {
+	
+	
+});
+// --> 
+</SCRIPT>
+</head>
+<body>
+<div class="full-wrp">
+	
+	<div id="header">
+		
+		<h1><span>Lively Documentation</span></h1>
+		<h2><span>Logo</span></h2>
+		
+		<div id="navbar">
+			<h3>Navigation</h3>
+			<ul>
+				<li><a href="?packages" class="active">packages</a></li>
+				<li><a href="?classes/ldoc">classes</a></li>
+				<li><a href="#">functions</a></li>
+				<li><a href="#">macros</a></li>
+				<li><a href="#">variables</a></li>
+			</ul>
+		</div><!-- end of navbar -->
+		
+		<div id="search">
+			<form action="?SEARCH/TAG/" method="post">
+				<input type="text" name="search" class="textfield" />
+				<button type="submit" class="search" >Search</button>
+			</form>
+		</div>
+		
+	</div><!-- end of toc -->
+	
+	<div id="content">
+		<h1>Lively Documentation System</h1>
+		
+		<div class="grid grid36">
+			<div class="elt">
+				
+				<div id="sidebar" class="mod">
+					<h3>PACKAGE</h3>
+					
+					<div class="extendableList">
+						<ul>
+							<li><a href="?PACKAGE/LDOC">LDOC</a></li>
+							<li><a href="?PACKAGE/HTML-TEMPLATE">HTML-TEMPLATE</a></li>
+							<li><a href="?PACKAGE/HUNCHENTOOT">HUNCHENTOOT</a></li>
+							<li><a href="?PACKAGE/HUNCHENTOOT-MP">HUNCHENTOOT-MP</a></li>
+							<li><a href="?PACKAGE/CHUNGA">CHUNGA</a></li>
+							<li><a href="?PACKAGE/CL-BASE64">CL-BASE64</a></li>
+							<li><a href="?PACKAGE/CL-FAD-TEST">CL-FAD-TEST</a></li>
+							<li><a href="?PACKAGE/CL-FAD">CL-FAD</a></li>
+							<li><a href="?PACKAGE/CL-PPCRE">CL-PPCRE</a></li>
+							<li><a href="?PACKAGE/CL+SSL">CL+SSL</a></li>
+							<li><a href="?PACKAGE/CFFI-FEATURES">CFFI-FEATURES</a></li>
+							<li><a href="?PACKAGE/CFFI">CFFI</a></li>
+							<li><a href="?PACKAGE/CFFI-SYS">CFFI-SYS</a></li>
+							<li><a href="?PACKAGE/BABEL">BABEL</a></li>
+							<li><a href="?PACKAGE/BABEL-ENCODINGS">BABEL-ENCODINGS</a></li>
+							<li><a href="?PACKAGE/ALEXANDRIA.0.DEV">ALEXANDRIA.0.DEV</a></li>
+							<li><a href="?PACKAGE/FLEXI-STREAMS">FLEXI-STREAMS</a></li>
+							<li><a href="?PACKAGE/TRIVIAL-GRAY-STREAMS">TRIVIAL-GRAY-STREAMS</a></li>
+							<li><a href="?PACKAGE/MD5">MD5</a></li>
+							<li><a href="?PACKAGE/RFC2388">RFC2388</a></li>
+							<li><a href="?PACKAGE/CL-BASE64-SYSTEM">CL-BASE64-SYSTEM</a></li>
+							<li><a href="?PACKAGE/SB-EXECUTABLE">SB-EXECUTABLE</a></li>
+							<li><a href="?PACKAGE/CL-PPCRE-ASD">CL-PPCRE-ASD</a></li>
+							<li><a href="?PACKAGE/TRIVIAL-GRAY-STREAMS-SYSTEM">TRIVIAL-GRAY-STREAMS-SYSTEM</a></li>
+							<li><a href="?PACKAGE/FLEXI-STREAMS-SYSTEM">FLEXI-STREAMS-SYSTEM</a></li>
+							<li><a href="?PACKAGE/CL+SSL-SYSTEM">CL+SSL-SYSTEM</a></li>
+							<li><a href="?PACKAGE/MD5-SYSTEM">MD5-SYSTEM</a></li>
+							<li><a href="?PACKAGE/RFC2388.SYSTEM">RFC2388.SYSTEM</a></li>
+							<li><a href="?PACKAGE/HUNCHENTOOT-ASD">HUNCHENTOOT-ASD</a></li>
+							<li><a href="?PACKAGE/URL-REWRITE">URL-REWRITE</a></li>
+							<li><a href="?PACKAGE/LDOC-ASD">LDOC-ASD</a></li>
+							<li><a href="?PACKAGE/CLOSER-COMMON-LISP-USER">CLOSER-COMMON-LISP-USER</a></li>
+						</ul>
+					</div><!-- end of extendableList -->
+					
+				</div><!-- end of mod -->
+				
+			</div><!-- end of elt -->
+			
+			<div class="elt">
+				<div class="grid grid55">
+					
+					<div class="elt">
+						
+						<div id="tasks" class="mod">
+							<h3>TASKS</h3>
+							
+							<div class="extendableList">
+								<ul>
+									<li><a href="?CLASS">FILTER</a>
+										<p>Do not forget to do something</p>
+										</li>
+									<li><a href="?SLOT">PRODFUN</a>
+										<p>Add some documentation to this</p></li>
+									<li><a href="?METHOD">PRECEDENCE-FILTER-LIST-LOOP</a>
+										<p>Hide in a closure</p></li>
+								</ul>
+							</div><!-- end of extendableList -->
+							
+						</div><!-- end of mod -->
+						
+					</div><!-- end of elt -->
+					
+					<div class="elt">
+						
+						<div class="mod">
+							<h3>UNDOCUMENTED</h3>
+							
+							<div class="filter">
+								<h3>Filter:</h3>
+								<ul>
+									<li><a>all</a></li>
+									<li><a>classes</a></li>
+									<li><a>functions</a></li>
+									<li><a>macros</a></li>
+									<li><a>variables</a></li>
+								</ul>
+								<hr class="clear" />
+							</div>
+							
+							<div class="extendableList">
+								<ul>
+									<li><a href="?SYMBOL/LDOC/*DOC-BUFFER*">*DOC-BUFFER*</a></li>
+									<li><a href="?SYMBOL/LDOC/*DOC-PACKAGE*">*DOC-PACKAGE*</a></li>
+									<li><a href="?SYMBOL/LDOC/*DOC-SERVER*">*DOC-SERVER*</a></li>
+									<li><a href="?SYMBOL/LDOC/*FILTERS*">*FILTERS*</a></li>
+									<li><a href="?SYMBOL/LDOC/*PAGES*">*PAGES*</a></li>
+									<li><a href="?SYMBOL/LDOC/*ROOT-TAG*">*ROOT-TAG*</a></li>
+									<li><a href="?SYMBOL/LDOC/*ROOT-TAG-NAME*">*ROOT-TAG-NAME*</a></li>
+									<li><a href="?SYMBOL/LDOC/*SERVER-CSS-DIR*">*SERVER-CSS-DIR*</a></li>
+									<li><a href="?SYMBOL/LDOC/*SERVER-JS-DIR*">*SERVER-JS-DIR*</a></li>
+									<li><a href="?SYMBOL/LDOC/*SERVER-STATIC-DIR*">*SERVER-STATIC-DIR*</a></li>
+									<li><a href="?SYMBOL/LDOC/*SERVER-STATIC-URI*">*SERVER-STATIC-URI*</a></li>
+									<li><a href="?SYMBOL/LDOC/*SERVER-TPL-DIR*">*SERVER-TPL-DIR*</a></li>
+								</ul>
+							</div><!-- end of extendableList -->
+							
+						</div><!-- end of mod -->
+						
+					</div><!-- end of elt -->
+					<hr class="clear" />
+				</div><!-- end of grid55 -->
+				
+			</div><!-- end of elt -->
+			<hr class="clear" />
+		</div><!-- end of grid36 -->
+		
+	</div><!-- end of content -->
+	
+	<div id="footer">
+		<p>Lively documentation</p>
+	</div><!-- end of footer -->
+
+</div><!-- end of full-wrp -->
+</body>
+</html>

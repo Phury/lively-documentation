@@ -1,0 +1,8 @@
+("Make a new database" "FUNCTION/LDOC/MAKE-DATABASE"
+ "We will first create a new database that will hold CDs")
+("Create CDs" "FUNCTION/LDOC/MAKE-CD"
+ "Making a CD is very easy")
+("Add records" "METHOD/LDOC/DATABASE/ADD-RECORD"
+ "We will populate the database with records and the previously presented MAKE-CD")
+("Query database" "METHOD/LDOC/DATABASE/SELECT"
+ "It is now possible to query the database with the select function")

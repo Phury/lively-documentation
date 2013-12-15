@@ -1,0 +1,5 @@
+("tag" "text" "class")("tag" "text" "persistency")("tag" "text" "database")("Implementation-detail"
+                                                                            "text"
+                                                                            "Database uses a list to take advantage of the LISP features that operate on lists")("test-unit"
+                                                                                                                                                                 ""
+                                                                                                                                                                 "")

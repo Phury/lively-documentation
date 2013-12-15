@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tag-Editor Demo</title>
+<link href="../media/css/demo.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+hr.clear {
+	clear: both;
+	visibility: hidden;
+}
+.wrapper {
+	margin: 1em;
+	padding: 1em;
+	background-color: #F5F5F5;
+	border: 1px solid #CCCCCC;
+}
+p.name { font-size: 120%; font-weight: bold; }
+p.type { display: none;}
+
+div.action a { margin-right: 0.3em; }
+
+.tags h3 { 
+	margin: 0.2em;
+	float: left;
+	font-size: 90%;
+	font-style: italic;
+	font-weight: normal;
+	text-transform: lowercase;
+}
+.tags ul li { float: left; }
+.tags ul li p {
+	margin: 0.2em 0.3em 0.2em 0.3em;
+	font-weight: normal;
+	font-family: serif;
+}
+
+.tagEditor {
+	clear: both;
+	margin: 0.5em;
+	padding: 0.5em;
+	background: #F0F0F0;
+}
+.tagEditor .tagChoice { padding: 0.5em 0 0.5em 0 ;}
+.tagEditor .tagChoice fieldset { 
+	float: left;
+	margin: 0 1em 0 1em;
+	padding: 0.5em;
+	border: none;
+	border-left: 1px solid #CCCCCC;
+}
+.tagEditor .tagChoice fieldset legend { 
+	font-size: 100%;
+	font-weight: bold;
+}
+.tagEditor .tagChoice label { display: block; line-height: 1.3em; padding: 0.3em; }
+.tagEditor .tagchoice input { margin-right: 0.5em; }
+.tagEditor .bbar { clear: both; }
+
+
+</style>
+
+
+
+<script type="text/javascript" src="../media/js/jquery.js"></script>
+<script type="text/javascript" src="tag-editor.jquery.js"></script>
+
+
+<script language="Javascript"> 
+<!-- 
+
+$(document).ready( function () {
+	
+	$('div.tags').tagEditor({visible: true});
+	
+});
+
+// --> 
+</script>
+
+
+</head>
+<body>
+<div class="wrapper">
+	<div class="tags">
+		<div class="horizontal">
+			<h3>tag(s):</h3>
+			<ul>
+				<li><a href="class">class</a></li>
+				<li><a href="printing">printing</a></li>
+				<li><a href="accessing">accessing</a></li>
+				<li><a href="todo">todo</a></li>
+			</ul>
+		</div>
+
+		<div class="tagEditor">
+			<div class="tagChoice">
+
+				<fieldset><legend>type</legend>
+
+					<label for="package">
+						<input id="package" type="checkbox" name="tag" value="package"/>
+						package
+					</label>
+					<label for="class">
+						<input id="class" type="checkbox" name="tag" value="class"/>
+						class
+					</label>
+					<label for="function">
+						<input id="function" type="checkbox" name="tag" value="function"/>
+						function
+					</label>
+					<label for="macro">
+						<input id="macro" type="checkbox" name="tag" value="macro"/>
+						macro
+					</label>
+					<label for="variable">
+						<input id="variable" type="checkbox" name="tag" value="variable"/>
+						variable
+					</label>
+				</fieldset>
+				<fieldset><legend>section</legend>
+
+					<label for="printing">
+						<input id="printing" type="checkbox" name="tag" value="printing"/>
+						printing
+					</label>
+					<label for="accessing">
+						<input id="accessing" type="checkbox" name="tag" value="accessing"/>
+						accessing
+					</label>
+					<label for="converting">
+						<input id="converting" type="checkbox" name="tag" value="converting"/>
+						converting
+					</label>
+					<label for="testing">
+						<input id="testing" type="checkbox" name="tag" value="testing"/>
+						testing
+					</label>
+					<label for="private">
+						<input id="private" type="checkbox" name="tag" value="private"/>
+						private
+					</label>
+				</fieldset>
+				<fieldset><legend>documentation</legend>
+
+					<label for="undocumented">
+						<input id="undocumented" type="checkbox" name="tag" value="undocumented"/>
+						undocumented
+					</label>
+					<label for="todo">
+						<input id="todo" type="checkbox" name="tag" value="todo"/>
+						todo
+					</label>
+					<label for="test-run">
+						<input id="test-run" type="checkbox" name="tag" value="test-run"/>
+						test-run
+					</label>
+					<label for="example">
+						<input id="example" type="checkbox" name="tag" value="example"/>
+						example
+					</label>
+				</fieldset>
+				<hr class="clear" />
+			</div><!-- end of tagchoice -->
+
+			<div class="bbar action">
+				<button type="button" class="save">save</button>
+				<button type="button" class="cancel">cancel</button>
+			</div>
+		</div><!-- end of tageditor -->
+
+	</div><!-- end of tags -->
+</div>
+</body>
+</html>

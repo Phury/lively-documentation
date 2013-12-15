@@ -1,0 +1,3 @@
+("docstring" NIL "This is some documentation for the dictionary class!")
+("example" NIL "(lambda (x y)(print (+ x y)))")
+("test-run" NIL "(assert T ((+ x y)) (3 4))")

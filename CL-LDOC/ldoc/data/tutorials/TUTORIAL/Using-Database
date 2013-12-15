@@ -1,0 +1,5 @@
+("Make a new database" "FUNCTION/LDOC/MAKE-DATABASE"
+ "We will first create a new database that will hold CDs")
+("Create CDs" "FUNCTION/LDOC/MAKE-CD"
+ "Making a CD is very easy")
+

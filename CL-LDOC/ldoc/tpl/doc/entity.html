@@ -1,0 +1,29 @@
+<!-- TMPL_INCLUDE 'header.html' -->
+
+<div id="content">
+		
+	<h1>Package <a href="?<!-- TMPL_VAR uri -->"><!-- TMPL_VAR name --></a></h1>
+	
+	<div class="grid grid36">
+		
+		<div id="sidebar" class="elt">
+			<!-- TMPL_CALL pkg-list -->
+		</div>
+		
+		<div class="elt">
+	
+			<div class="mod">
+				<h2><!-- TMPL_VAR title --> Summary</h2>
+				<!-- TMPL_CALL entity-table -->
+			</div><!-- end of mod -->
+	
+			<div class="mod">
+				<h2><!-- TMPL_VAR title --> Documentation</h2>
+				<!-- TMPL_CALL entities -->
+			</div><!-- end of mod -->
+			
+		</div><!-- end of elt -->
+	</div><!-- end of grid -->	
+</div><!-- end of content -->
+	
+<!-- TMPL_INCLUDE 'footer.html' -->

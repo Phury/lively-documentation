@@ -1,0 +1,11 @@
+
+<!-- TMPL_IF title --><h3><!-- TMPL_VAR title --></h3><!-- /TMPL_IF -->
+<div class="tagCloud">
+	<ul><!-- TMPL_LOOP tags -->
+		<li>
+			<a href="?search/tag/<!-- TMPL_VAR tag -->"><!-- TMPL_VAR tag --></a>
+			<span><!-- TMPL_VAR count --></span>
+		</li><!-- /TMPL_LOOP -->
+	</ul>
+	<hr class="clear"/>
+</div>

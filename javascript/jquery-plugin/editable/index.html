@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Editor Demo</title>
+<link href="../media/css/demo.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.wrapper {
+	margin: 1em;
+	padding: 1em;
+	background-color: #F5F5F5;
+	border: 1px solid #CCCCCC;
+}
+.mod {
+	
+}
+.mod .editable, .mod .newEditable {
+	margin: 0.5em;
+	padding: 0.5em;
+	border-bottom: 1px dotted #C3C3C3;
+}
+
+p.name {
+	font-weight: bold;
+	font-size: 110%;	
+}
+p.type { display: none; }
+
+button {
+	margin: 0;
+	padding: 0.3em 0.5em 0.3em 0.5em;
+	background: #f5f5f5;
+	border: 1px solid #CCCCCC;
+	font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size: 0.8em;
+	line-height:1.5em;
+	text-decoration:none;
+	font-weight:bold;
+	color: #888888;
+}
+button.save { color:#529214; }
+button.save:hover {
+	background-color:#E6EFC2;
+	border:1px solid #C6D880;
+}
+button.cancel { color:#D12F19; }
+button.cancel:hover {
+	background:#FBE3E4;
+	border:1px solid #FBC2C4;	
+}
+a { padding-right: 0.5em; }
+
+
+
+</style>
+
+
+
+<script type="text/javascript" src="../media/js/jquery.js"></script>
+<script type="text/javascript" src="editable.jquery.js"></script>
+
+
+<script language="Javascript"> 
+<!-- 
+
+$(document).ready( function () {
+	
+	$('.editable-wrapper').editable();
+	
+});
+
+// --> 
+</script>
+
+
+</head>
+<body>
+<div class="wrapper">
+	<form method="post" action="submit">
+		
+		<div class="mod">
+			<h3>Function FOOBAR</h3>
+				
+			<div id="FOOBAR" class="editable-wrapper">
+				
+				<div class="editable">
+					<p class="name">docstring</p>
+					<p class="value">The method foobar prints foobar on the standard output</p>
+					<p class="type">text</p>
+					<div class="editor"></div>
+					<a href="#FOOBAR" class="edit">edit</a><a href="#FOOBAR" class="delete" onclick="delEditable(this);">delete</a>
+				</div><!-- end of editable -->
+			
+			</div><!-- end of editable-wrapper -->
+			
+			<div class="newEditable">
+				<a href="#" class="new" onclick="addEditable('FOOBAR');">new</a>
+			</div>
+				
+		</div><!-- end of box -->
+		<button type="submit" class="save">save modifications</button>
+		
+	</form>
+</div>
+</body>
+</html>

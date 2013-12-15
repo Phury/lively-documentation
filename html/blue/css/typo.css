@@ -1,0 +1,87 @@
+body {
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Helvetica", "Arial", sans-serif;
+	letter-spacing:-0.05em;
+	color: #4285A6;
+}
+h1, h2, h3, h4 {
+	font-weight: lighter;
+	margin: 0.4em 0 0.1em 0;	
+}
+h1 {
+	font-family: Verdana, "Geneva", sans-serif;
+	font-size: 3em;
+	letter-spacing:-0.1em;
+	text-transform: lowercase;
+	margin-left: 0.5em;
+}
+h2 {
+	font-size: 225%;
+}
+h3 {
+	font-size: 175%;
+}
+h4 {
+	font-size: 125%;	
+}
+h1 a, h2 a, h3 a {
+	padding: 0;
+	background: inherit;
+	color: #636363;
+}
+h1 a:hover, h2 a:hover, h3 a:hover {
+	color: #225c79;
+	background: inherit;
+}
+p, a {
+	line-height: 1.4em;
+}
+p.docstring {
+	font-style: italic;
+}
+a {
+	padding: 0 0.3em 0 0.3em;
+	color: #636363;
+}
+a:hover {
+	background: #ebebeb;
+	color: #4285A6;
+}
+
+dl {
+	background: #ebebeb;
+}
+dl.odd {
+	background: inherit;
+}
+dl dt, dl dd {
+	padding: 0.7em;
+}
+dl dt.code {
+	float: left;
+	display: block;
+	width: 33%;
+	border-right: 1px solid #cccccc;
+	margin-right: 0.5em;
+	font: 1.2em "Monaco", "Andale Mono","Lucida Console","Bitstream Vera Sans Mono","Courier New", monospace;
+}
+dl a {
+	color: #000;
+	text-decoration: none;
+}
+
+
+/* specific */
+#header h1 {
+	
+}
+#header h2 {
+	display: none;
+}
+.navbar mh {
+	
+}

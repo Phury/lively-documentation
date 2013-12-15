@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tag Cloud Demo</title>
+<!-- <link href="../media/css/demo.css" rel="stylesheet" type="text/css" /> -->
+<style type="text/css">
+
+div.box {
+	width: 250px;
+	overflow: auto;
+}
+ul { list-style-type: none; }
+li { float:left; }
+a {
+	padding-left: 0.5em;
+	text-decoration: none;
+	font-family: serif;
+	color: #39B54A;
+}
+</style>
+
+
+
+<script type="text/javascript" src="../media/js/jquery.js"></script>
+<script type="text/javascript" src="cloud.jquery.js"></script>
+
+
+<script language="Javascript"> 
+<!-- 
+
+$(document).ready( function () {
+	$(".box").tagCloud();
+});
+
+// --> 
+</script>
+
+
+</head>
+<body>
+	
+<h1>Tag Cloud Demo</h1>
+	
+<h3>Cloud</h3>
+<div class="box demoUI">
+	<ul>
+		<li><a href="#">accessing</a><span>55</span></li>
+		<li><a href="#">abstract</a><span>3</span></li>
+		<li><a href="#">method</a><span>185</span></li>
+		<li><a href="#">condition-class</a><span>1</span></li>
+		<li><a href="#">todo</a><span>3</span></li>
+		<li><a href="#">undocumented</a><span>515</span></li>
+		<li><a href="#">class</a><span>39</span></li>
+		<li><a href="#">slot</a><span>139</span></li>
+		<li><a href="#">function</a><span>157</span></li>
+		<li><a href="#">variable</a><span>35</span></li>
+	<!--	
+		<li><a href="?PACKAGE/LDOC">LDOC</a><span>2</span></li>
+		<li><a href="?PACKAGE/HTML-TEMPLATE">HTML-TEMPLATE</a><span>10</span></li>
+		<li><a href="?PACKAGE/HUNCHENTOOT">HUNCHENTOOT</a><span>28</span></li>
+		<li><a href="?PACKAGE/HUNCHENTOOT-MP">HUNCHENTOOT-MP</a><span>37</span></li>
+		<li><a href="?PACKAGE/CHUNGA">CHUNGA</a><span>42</span></li>
+		<li><a href="?PACKAGE/CL-BASE64">CL-BASE64</a><span>11</span></li>
+		<li><a href="?PACKAGE/CL-FAD-TEST">CL-FAD-TEST</a><span>9</span></li>
+		<li><a href="?PACKAGE/CL-FAD">CL-FAD</a><span>5</span></li>
+		<li><a href="?PACKAGE/CL-PPCRE">CL-PPCRE</a><span>1</span></li>
+		<li><a href="?PACKAGE/CL+SSL">CL+SSL</a><span>34</span></li>
+		<li><a href="?PACKAGE/CFFI-FEATURES">CFFI-FEATURES</a><span>19</span></li>
+		<li><a href="?PACKAGE/CFFI">CFFI</a><span>37</span></li>
+		<li><a href="?PACKAGE/CFFI-SYS">CFFI-SYS</a><span>29</span></li>
+		<li><a href="?PACKAGE/BABEL">BABEL</a><span>20</span></li>
+		<li><a href="?PACKAGE/BABEL-ENCODINGS">BABEL-ENCODINGS</a><span>17</span></li>
+	-->
+	</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+.javascript {
+	font-family: "Monaco";
+	font-size: 0.8em;
+}
+.javascript  .comment {
+	color : green; /* ffbgffg */
+}
+
+.javascript  .string {
+	color : maroon;
+}
+
+.javascript  .keywords {
+	color: purple;
+	font-weight : bolder;
+}
+
+.javascript  .global {
+	color: blue;
+	font-weight: bold;
+}
+
+.javascript  .brackets {
+	color : black;
+}

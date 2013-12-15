@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Accordion Demo</title>
+<link href="../media/css/demo.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.accordion h3 { margin: 0; padding: 0; }
+.accordion h3 a {
+	display: block;
+	font-family: serif;
+	font-size: 120%;
+	margin: 0;
+	padding: 0.5em;
+	border: 1px solid #CCCCCC;
+	border-top: 1px solid #F5F5F5;
+	border-left: 1px solid #F5F5F5;
+	background: #F5F5F5 url("accordion_bg.png") repeat-x;
+	text-decoration: none;
+	color: #444444;
+}
+
+</style>
+
+
+
+<script type="text/javascript" src="../media/js/jquery.js"></script>
+<script type="text/javascript" src="accordion.jquery.js"></script>
+
+
+<script language="Javascript"> 
+<!-- 
+
+$(document).ready( function () {
+	$(".accordion").accordion();
+});
+
+// --> 
+</script>
+
+
+</head>
+<body>
+	
+<h1>Accordion Demo</h1>
+	
+<h3>Package</h3>
+<div class="box accordion demoUI">
+	<h3>List 1</h3>
+	<ul>
+		<li><a href="?PACKAGE/LDOC">LDOC</a></li>
+		<li><a href="?PACKAGE/HTML-TEMPLATE">HTML-TEMPLATE</a></li>
+		<li><a href="?PACKAGE/HUNCHENTOOT">HUNCHENTOOT</a></li>
+		<li><a href="?PACKAGE/HUNCHENTOOT-MP">HUNCHENTOOT-MP</a></li>
+		<li><a href="?PACKAGE/CHUNGA">CHUNGA</a></li>
+	</ul>
+	<h3>List 2</h3>
+	<ul>
+		<li><a href="?PACKAGE/LDOC">LDOC</a></li>
+		<li><a href="?PACKAGE/HTML-TEMPLATE">HTML-TEMPLATE</a></li>
+		<li><a href="?PACKAGE/HUNCHENTOOT">HUNCHENTOOT</a></li>
+		<li><a href="?PACKAGE/HUNCHENTOOT-MP">HUNCHENTOOT-MP</a></li>
+		<li><a href="?PACKAGE/CHUNGA">CHUNGA</a></li>
+	</ul>
+	<h3>List 3</h3>
+	<ul>
+		<li><a href="?PACKAGE/LDOC">LDOC</a></li>
+		<li><a href="?PACKAGE/HTML-TEMPLATE">HTML-TEMPLATE</a></li>
+		<li><a href="?PACKAGE/HUNCHENTOOT">HUNCHENTOOT</a></li>
+		<li><a href="?PACKAGE/HUNCHENTOOT-MP">HUNCHENTOOT-MP</a></li>
+		<li><a href="?PACKAGE/CHUNGA">CHUNGA</a></li>
+	</ul>
+	<h3>List 4</h3>
+	<ul>
+		<li><a href="?PACKAGE/LDOC">LDOC</a></li>
+		<li><a href="?PACKAGE/HTML-TEMPLATE">HTML-TEMPLATE</a></li>
+		<li><a href="?PACKAGE/HUNCHENTOOT">HUNCHENTOOT</a></li>
+		<li><a href="?PACKAGE/HUNCHENTOOT-MP">HUNCHENTOOT-MP</a></li>
+		<li><a href="?PACKAGE/CHUNGA">CHUNGA</a></li>
+	</ul>
+</div>
+
+</body>
+</html>

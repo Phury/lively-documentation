@@ -1,0 +1,222 @@
+/****** NOTIFICATION ******/
+div.notification {
+	margin: 1em 0 1em 0;
+	padding: 0.5em 1em 0.5em 1em;
+	color: #666666;
+}
+div.notification p a {
+	display: none;
+}
+div.notification:hover p a {
+	display: inline;
+}
+
+div.notification.success {
+	background: #e8f1ec;
+	border-top: 1px solid #90bca2;
+	border-bottom: 1px solid #90bca2;
+}
+
+div.notification.error {
+	background: #f4e4e4;
+	border-top: 1px solid #cd7f7f;
+	border-bottom: 1px solid #cd7f7f;
+}
+
+div.notification.warning {
+	background: #fcf7dc;
+	border-top: 1px solid #ebd961;
+	border-bottom: 1px solid #ebd961;
+}
+
+/****** BUTTONS ******/
+button {
+	padding: 0.5em 0.7em 0.5em 0.7em;
+	border:1px solid #C3C3C3;
+	border-top:1px solid #EEEEEE;
+	border-left:1px solid #EEEEEE;
+	background: #F5F5F5 url('img/button_bg.png') repeat-x;
+	font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-weight: bold;
+	font-size: 80%;
+	text-transform: lowercase;
+	color:#565656;
+}
+
+button:hover {
+	border:1px solid #C3C3C3;
+	border-bottom:1px solid #EEEEEE;
+	border-right:1px solid #EEEEEE;
+}
+
+/****** TABLE ******/
+table { width: 100%; margin: 0.5em; border: 1px solid #C3C3C3; }
+tr th{
+	text-transform: lowercase;
+	text-align: center;
+	font-size: 90%;
+	margin: 0;
+	padding: 0.3em;
+	color: #888888;
+	/*background: #a7b7cf url("img/th_bg.png") repeat-x;*/
+	border-bottom: 1px solid #C3C3C3;
+	
+}
+tr td {
+	padding: 0.5em;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #C3C3C3;
+}
+tr th:first-child, tr td:first-child {
+	width: 25%;
+	border-right: 1px solid #C3C3C3;
+}
+
+/****** CLOUD ******/
+div.tagCloud { 
+	background: #FFFFFF url('img/cloud_bg.png') no-repeat center;
+}
+div.tagCloud li a {
+	padding: 0 0.2em 0 0.2em;
+}
+
+div.tagCloud li { float: left; }
+
+/****** CLONABLE / TAGS ******/
+div.clonable, div.tags, div.clonable-wrapper > div.action/* new editor */ {
+	padding: 0.5em;
+	border-bottom: 1px dotted #C3C3C3;
+}
+div.clonable {
+	color: #444444;
+}
+
+div.box > h3 {
+	color: #39B54A;
+}
+
+div.clonable p.name {
+	color: #000000;
+	font-size: 140%;
+	margin: 0.5em 0 0.3em 0;
+}
+div.clonable p.type { display: none; }
+
+/****** EDITOR ******/
+div.editor {
+	margin: 0.5em;
+	padding: 0.5em;
+	background: #F0F0F0;
+}
+div.editor label {
+	font-family: serif;
+	font-size: 110%;
+	text-transform: capitalize;
+	margin-top: 0.2em;
+}
+div.editor input { margin-right: 1em; }
+div.editor select, div.editor input, div.editor textarea {}
+div.editor input { 
+	padding: 0.2em;
+	border: 1px solid #999999;
+	width: 50%;
+}
+div.editor textarea {
+	width: 99%;
+	height: 15em;
+	margin: 0.5em 0 0.5em 0;
+	padding: 0.2em;
+	border: 1px solid #999999;
+}
+div.editor select {
+	margin-right: 0.5em;
+}
+
+div.editor div.action {
+	padding: 0.5em;
+}
+div.editor button.more {
+	display: block;
+	margin-bottom: 0.5em;
+}
+
+/****** TAG-EDITOR ******/
+div.tagEditor {
+	clear: both;
+	margin: 0.5em;
+	padding: 0.5em;
+	background: #F0F0F0;
+}
+div.tagEditor div.tagChoice { padding: 0.5em 0 0.5em 0 ;}
+div.tagEditor div.tagChoice fieldset { 
+	float: left;
+	margin: 0 1em 0 1em;
+	padding-left: 0.5em;
+	border: none;
+	border-left: 1px solid #CCCCCC;
+}
+div.tagEditor div.tagChoice fieldset legend { 
+	font-size: 110%;
+	font-weight: bold;
+}
+div.tagEditor div.tagChoice label { display: block; line-height: 1.3em; padding: 0.1em; }
+div.tagEditor div.tagChoice input { margin-right: 0.5em; }
+div.tagEditor div.bbar { clear: both; }
+
+/****** ACCORDION ******/
+div.accordion h2 { margin: 0; padding: 0; border: 0;}
+
+/*div.accordion h2 a{
+	display: block;
+	margin: 0.5em 0 0 0;
+	padding: 0.4em;
+	color: #444444;
+	font-weight: lighter;
+	font-size: 175%;
+	text-transform: capitalize;
+	letter-spacing: -1px;
+	background: #dadada url("img/accordion_bg.png") repeat-x;
+	border-top: 1px solid #ececec;
+	border-left: 1px solid #ececec;
+	border-bottom: 1px solid #bbbbbb;
+	border-right: 1px solid #bbbbbb;
+}*/
+div.accordion h2 a{
+	display: block;
+	color: #444444;
+	font-weight: lighter;
+	font-size: 120%;	
+}
+div.accordion div.toggle {
+	display: block;
+	margin: 0;
+	padding: 1em;
+	border-left: 1px solid #ececec;
+	border-bottom: 1px solid #bbbbbb;
+	border-right: 1px solid #bbbbbb;
+}
+
+/****** ALPHASORTER ******/
+div.alphasorter {
+	font-family: "Lucida Grande";
+	letter-spacing: -1px;
+	text-align: center;
+}
+div.big div.alphasorter { font-size: 180%; }
+
+div.alphasorter, div.alphasorter h3, div.alphasorter a { font-family: serif; font-weight: normal; }
+div.alphasorter h3 { 
+	float: left;
+	font-size: 100%;
+	font-style: italic;
+	margin: 0 0.3em 0 0;
+	color: #999999;
+}
+div.alphasorter ul { margin: 0; padding: 0; }
+div.alphasorter ul li { 
+	display: inline;
+}
+
+div.alphasorter ul li a {
+	padding: 0 0.3em 0 0.3em;
+}

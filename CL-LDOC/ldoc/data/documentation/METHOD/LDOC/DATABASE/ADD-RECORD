@@ -1,0 +1,7 @@
+("tag" "text" "method")("tag" "text" "accessing")("tag" "text" "database")("Example"
+                                                                           "code"
+                                                                           "(add-record *cd-database* (make-cd \"The clairvoyant\" \"Iron Maiden\" 10 t))
+(add-record *cd-database* (make-cd \"Best of the beast\" \"Iron Maiden\" 8 t))
+(add-record *cd-database* (make-cd \"Roses\" \"Kathy Mattea\" 2 t))
+(add-record *cd-database* (make-cd \"Fly\" \"Dixie Chicks\" 6 t))
+(add-record *cd-database* (make-cd \"Home\" \"Dixie Chicks\" 4 t))")

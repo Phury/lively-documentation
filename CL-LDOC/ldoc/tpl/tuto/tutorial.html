@@ -1,0 +1,40 @@
+<!-- TMPL_INCLUDE 'header.html' -->
+
+<div id="content">
+	<h1></h1>
+
+	<div class="grid grid36">
+		
+		<div id="sidebar" class="elt">
+			<!-- TMPL_IF toc -->
+			<!-- TMPL_CALL toc -->
+			<!-- /TMPL_IF -->
+		</div>
+		
+		<div class="elt">
+			<h2><!-- TMPL_VAR title --></h2>
+			<!-- TMPL_CALL section-list -->
+			
+			<!-- TMPL_LOOP sections -->
+			<div class="mod">
+				<h2 id="name"><!-- TMPL_VAR name --></h2>
+				<pre class="value"><!-- TMPL_VAR value --></pre>
+				<!-- TMPL_LOOP entity -->
+					<h3>details from: <a href="?<!-- TMPL_VAR uri -->"><!-- TMPL_VAR name --></a></h3>
+					<div class="mod">
+					<!-- TMPL_LOOP documentation -->
+						<h4><!-- TMPL_VAR name --></h4>
+						<pre class="value"><!-- TMPL_VAR value --></pre>
+					<!-- /TMPL_LOOP -->
+					</div>
+				<!-- /TMPL_LOOP -->
+			</div>
+			<!-- /TMPL_LOOP -->
+		</div>
+		
+	</div><!-- end of grid -->
+		
+</div><!-- end of content -->
+
+
+<!-- TMPL_INCLUDE 'footer.html' -->

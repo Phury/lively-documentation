@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title><!-- TMPL_VAR title --></title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<link href="/media/css/green/style.css" rel="stylesheet" type="text/css" />
+
+	<script type="text/javascript" src="/media/js/jquery.js"></script>
+	
+	<script type="text/javascript" src="/media/js/ldoc/alphasorter.jquery.js"></script>	
+	<script type="text/javascript" src="/media/js/ldoc/cloud.jquery.js"></script>
+	<script type="text/javascript" src="/media/js/ldoc/editor.jquery.js"></script>	
+	<script type="text/javascript" src="/media/js/ldoc/ldoc.jquery.js"></script>
+	<script type="text/javascript" src="/media/js/ldoc/tag-editor.jquery.js"></script>
+
+	<script type="text/javascript" src="/media/js/parallax/jquery.jparallax.js"></script>
+
+<script type="text/javascript">  
+<!-- 
+$(document).ready( function () {
+	
+	$('#logo').jparallax();
+	$('#content div.tagCloud').tagCloud();
+	$('#sidebar div.alpha').alphasorter({filterPosition: 'h3'});
+	$('body').ldoc();
+	
+});
+// --> 
+</script>
+</head>
+<body>
+<div class="home">
+
+<div id="header">
+	
+	<h1><span>Lively Documentation</span></h1>
+	<h2><span>Logo</span></h2>
+	
+	<div id="logo">
+		<img src="/media/js/parallax/docs/0.png" alt="" style="width:672px; height:504px;"/>
+		<img src="/media/js/parallax/docs/1.png" alt="" style="width:747px; height:560px;"/>
+		<img src="/media/js/parallax/docs/2.png" alt="" style="width:830px; height:622px;"/>
+		<img src="/media/js/parallax/docs/3.png" alt="" style="width:922px; height:691px;"/>
+		<img src="/media/js/parallax/docs/4.png" alt="" style="width:1024px; height:768px;"/>
+	</div>
+	
+	<!-- TMPL_CALL menu -->
+		
+	<div id="search">
+		<form action="?SEARCH/TAG/" method="post">
+			<fieldset>
+				<input type="text" name="search" class="textfield" />
+				<button type="submit" class="search" >Search</button>
+			</fieldset>
+		</form>
+	</div>
+	
+</div><!-- end of header -->
+
+<div id="content">
+	
+	<h1 class="right">lively documentation system</h1>
+	
+	<div class="grid grid36">
+		
+		<div id="sidebar" class="elt">
+			<div class="alpha">
+			<!-- TMPL_CALL pkg-list -->
+			</div>
+		</div>
+		
+		<div class="elt">
+			
+			<div class="grid grid55">
+				<div class="elt"><!-- TMPL_CALL tag-cloud --></div>
+				<div class="elt"><!-- TMPL_CALL tasks --></div>
+				<hr class="clear" />
+			</div>
+			
+			<h2>Random entities of package <!-- TMPL_VAR name --></h2>
+			
+			<div class="grid grid55">
+				<div class="elt">
+					<!-- TMPL_CALL class-list -->
+					<a href="?class">view all</a>
+				</div>
+				<div class="elt">
+					<!-- TMPL_CALL function-list -->
+					<a href="?function">view all</a>
+				</div>
+				<hr class="clear" />
+			</div>
+			
+			<div class="grid grid55">
+				<div class="elt">
+					<!-- TMPL_CALL macro-list -->
+					<a href="?macro">view all</a>
+				</div>
+				<div class="elt">
+					<!-- TMPL_CALL variable-list -->
+					<a href="?variable">view all</a>
+				</div>
+				<hr class="clear" />
+			</div>
+			
+		</div>
+		<hr class="clear" />
+	</div>
+
+
+</div><!-- end of content -->
+
+<div id="footer">
+	<p>lively documentation</p>
+</div><!-- end of footer -->
+
+</div>
+</body>
+</html>

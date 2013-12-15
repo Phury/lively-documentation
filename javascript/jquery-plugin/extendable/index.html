@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Extendable List Demo</title>
+<link href="../media/css/demo.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+a.extendAction { float: right; }
+</style>
+
+
+
+<script type="text/javascript" src="../media/js/jquery.js"></script>
+<script type="text/javascript" src="extendable.jquery.js"></script>
+
+
+<script language="Javascript"> 
+<!-- 
+
+$(document).ready( function () {
+	$(".box").extendable();
+});
+
+// --> 
+</script>
+
+
+</head>
+<body>
+	
+<h1>Extendable List Demo</h1>
+	
+<h3>Package</h3>
+<div class="box demoUI">
+	<ul class="extendable">
+		
+		<li><a href="?PACKAGE/LDOC">LDOC</a></li>
+		
+		<li><a href="?PACKAGE/HTML-TEMPLATE">HTML-TEMPLATE</a></li>
+		
+		<li><a href="?PACKAGE/HUNCHENTOOT">HUNCHENTOOT</a></li>
+		
+		<li><a href="?PACKAGE/HUNCHENTOOT-MP">HUNCHENTOOT-MP</a></li>
+		
+		<li><a href="?PACKAGE/CHUNGA">CHUNGA</a></li>
+		
+		<li><a href="?PACKAGE/CL-BASE64">CL-BASE64</a></li>
+		
+		<li><a href="?PACKAGE/CL-FAD-TEST">CL-FAD-TEST</a></li>
+		
+		<li><a href="?PACKAGE/CL-FAD">CL-FAD</a></li>
+		
+		<li><a href="?PACKAGE/CL-PPCRE">CL-PPCRE</a></li>
+		
+		<li><a href="?PACKAGE/CL+SSL">CL+SSL</a></li>
+		
+		<li><a href="?PACKAGE/CFFI-FEATURES">CFFI-FEATURES</a></li>
+		
+		<li><a href="?PACKAGE/CFFI">CFFI</a></li>
+		
+		<li><a href="?PACKAGE/CFFI-SYS">CFFI-SYS</a></li>
+		
+		<li><a href="?PACKAGE/BABEL">BABEL</a></li>
+		
+		<li><a href="?PACKAGE/BABEL-ENCODINGS">BABEL-ENCODINGS</a></li>
+		
+		<li><a href="?PACKAGE/ALEXANDRIA.0.DEV">ALEXANDRIA.0.DEV</a></li>
+		
+		<li><a href="?PACKAGE/FLEXI-STREAMS">FLEXI-STREAMS</a></li>
+		
+		<li><a href="?PACKAGE/TRIVIAL-GRAY-STREAMS">TRIVIAL-GRAY-STREAMS</a></li>
+		
+		<li><a href="?PACKAGE/MD5">MD5</a></li>
+		
+		<li><a href="?PACKAGE/RFC2388">RFC2388</a></li>
+		
+		<li><a href="?PACKAGE/CL-BASE64-SYSTEM">CL-BASE64-SYSTEM</a></li>
+		
+		<li><a href="?PACKAGE/SB-EXECUTABLE">SB-EXECUTABLE</a></li>
+		
+		<li><a href="?PACKAGE/CL-PPCRE-ASD">CL-PPCRE-ASD</a></li>
+		
+		<li><a href="?PACKAGE/TRIVIAL-GRAY-STREAMS-SYSTEM">TRIVIAL-GRAY-STREAMS-SYSTEM</a></li>
+		
+		<li><a href="?PACKAGE/FLEXI-STREAMS-SYSTEM">FLEXI-STREAMS-SYSTEM</a></li>
+		
+		<li><a href="?PACKAGE/CL+SSL-SYSTEM">CL+SSL-SYSTEM</a></li>
+		
+		<li><a href="?PACKAGE/MD5-SYSTEM">MD5-SYSTEM</a></li>
+		
+		<li><a href="?PACKAGE/RFC2388.SYSTEM">RFC2388.SYSTEM</a></li>
+		
+		<li><a href="?PACKAGE/HUNCHENTOOT-ASD">HUNCHENTOOT-ASD</a></li>
+		
+		<li><a href="?PACKAGE/URL-REWRITE">URL-REWRITE</a></li>
+		
+		<li><a href="?PACKAGE/LDOC-ASD">LDOC-ASD</a></li>
+		
+		<li><a href="?PACKAGE/CLOSER-COMMON-LISP-USER">CLOSER-COMMON-LISP-USER</a></li>
+		
+		<li><a href="?PACKAGE/CLOSER-COMMON-LISP">CLOSER-COMMON-LISP</a></li>
+		
+		<li><a href="?PACKAGE/CLOSER-MOP">CLOSER-MOP</a></li>
+		
+		<li><a href="?PACKAGE/SWANK-IO-PACKAGE">SWANK-IO-PACKAGE</a></li>
+		
+		<li><a href="?PACKAGE/SWANK">SWANK</a></li>
+		
+		<li><a href="?PACKAGE/SB-CLTL2-SYSTEM">SB-CLTL2-SYSTEM</a></li>
+		
+		<li><a href="?PACKAGE/SB-CLTL2">SB-CLTL2</a></li>
+		
+		<li><a href="?PACKAGE/SB-POSIX-SYSTEM">SB-POSIX-SYSTEM</a></li>
+		
+		<li><a href="?PACKAGE/SB-POSIX">SB-POSIX</a></li>
+		
+		<li><a href="?PACKAGE/SB-INTROSPECT">SB-INTROSPECT</a></li>
+		
+		<li><a href="?PACKAGE/SB-BSD-SOCKETS">SB-BSD-SOCKETS</a></li>
+		
+		<li><a href="?PACKAGE/SB-BSD-SOCKETS-SYSTEM">SB-BSD-SOCKETS-SYSTEM</a></li>
+		
+		<li><a href="?PACKAGE/SB-GROVEL-SYSTEM">SB-GROVEL-SYSTEM</a></li>
+		
+		<li><a href="?PACKAGE/SB-GROVEL">SB-GROVEL</a></li>
+		
+		<li><a href="?PACKAGE/SB-BSD-SOCKETS-INTERNAL">SB-BSD-SOCKETS-INTERNAL</a></li>
+		
+		<li><a href="?PACKAGE/ASDF">ASDF</a></li>
+		
+		<li><a href="?PACKAGE/SWANK-MOP">SWANK-MOP</a></li>
+		
+		<li><a href="?PACKAGE/SWANK-BACKEND">SWANK-BACKEND</a></li>
+		
+		<li><a href="?PACKAGE/SWANK-LOADER">SWANK-LOADER</a></li>
+		
+		<li><a href="?PACKAGE/COMMON-LISP-USER">COMMON-LISP-USER</a></li>
+		
+		<li><a href="?PACKAGE/SB-LOOP">SB-LOOP</a></li>
+		
+		<li><a href="?PACKAGE/SB-EVAL">SB-EVAL</a></li>
+		
+		<li><a href="?PACKAGE/SB-WALKER">SB-WALKER</a></li>
+		
+		<li><a href="?PACKAGE/SB-UNIX">SB-UNIX</a></li>
+		
+		<li><a href="?PACKAGE/SB-SEQUENCE">SB-SEQUENCE</a></li>
+		
+		<li><a href="?PACKAGE/SB-PROFILE">SB-PROFILE</a></li>
+		
+		<li><a href="?PACKAGE/SB-PRETTY">SB-PRETTY</a></li>
+		
+		<li><a href="?PACKAGE/SB-MOP">SB-MOP</a></li>
+		
+		<li><a href="?PACKAGE/SB-GRAY">SB-GRAY</a></li>
+		
+		<li><a href="?PACKAGE/SB-FORMAT">SB-FORMAT</a></li>
+		
+		<li><a href="?PACKAGE/SB-FASL">SB-FASL</a></li>
+		
+		<li><a href="?PACKAGE/SB-DISASSEM">SB-DISASSEM</a></li>
+		
+		<li><a href="?PACKAGE/SB-DEBUG">SB-DEBUG</a></li>
+		
+		<li><a href="?PACKAGE/SB-C">SB-C</a></li>
+		
+		<li><a href="?PACKAGE/SB-BIGNUM">SB-BIGNUM</a></li>
+		
+		<li><a href="?PACKAGE/SB-ASSEM">SB-ASSEM</a></li>
+		
+		<li><a href="?PACKAGE/SB-ALIEN">SB-ALIEN</a></li>
+		
+		<li><a href="?PACKAGE/SB-PCL">SB-PCL</a></li>
+		
+		<li><a href="?PACKAGE/SB-ALIEN-INTERNALS">SB-ALIEN-INTERNALS</a></li>
+		
+		<li><a href="?PACKAGE/SB-THREAD">SB-THREAD</a></li>
+		
+		<li><a href="?PACKAGE/SB-DI">SB-DI</a></li>
+		
+		<li><a href="?PACKAGE/KEYWORD">KEYWORD</a></li>
+		
+		<li><a href="?PACKAGE/SB-IMPL">SB-IMPL</a></li>
+		
+		<li><a href="?PACKAGE/SB-SYS">SB-SYS</a></li>
+		
+		<li><a href="?PACKAGE/SB-KERNEL">SB-KERNEL</a></li>
+		
+		<li><a href="?PACKAGE/SB-VM">SB-VM</a></li>
+		
+		<li><a href="?PACKAGE/SB-INT">SB-INT</a></li>
+		
+		<li><a href="?PACKAGE/SB-EXT">SB-EXT</a></li>
+		
+		<li><a href="?PACKAGE/COMMON-LISP">COMMON-LISP</a></li>
+		
+	</ul>
+</div>
+
+</body>
+</html>

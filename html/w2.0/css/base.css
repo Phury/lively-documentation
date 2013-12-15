@@ -1,0 +1,26 @@
+/*
+SCHEME: http://colorschemedesigner.com/#2O42hc.unw0w0
+*/
+
+.mh {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+.mh li {
+	float: left;
+	display: block;
+	list-style-type: none;
+}
+
+.mh li a {
+	display: block;
+}
+
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote,
+pre, form, fieldset, table, th, td { margin: 0; padding: 0; }
+
+
+li { list-style: none; }
+
+hr { clear: both; visibility: hidden;}

@@ -1,0 +1,16 @@
+
+<!-- TMPL_IF title --><h3><!-- TMPL_VAR title --></h3><!-- /TMPL_IF -->
+<table border="0" cellspacing="0" cellpadding="0" id="">
+	<thead>
+		<tr><!-- TMPL_LOOP header -->
+			<th><!-- TMPL_VAR name --></th><!-- /TMPL_LOOP -->
+		</tr>
+	</thead>
+	
+	<tbody><!-- TMPL_LOOP content -->
+		<tr>
+			<td><a href="#<!-- TMPL_VAR name -->"  class="code"><!-- TMPL_VAR name --></a></td>
+			<td><p class="docstring"><!-- TMPL_VAR value --></p></td>
+		</tr><!-- /TMPL_LOOP -->
+	</tbody>
+</table>

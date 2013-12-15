@@ -1,0 +1,2 @@
+("tag" "text" "function")("tag" "text" "undocumented")("Example" "code"
+                                                       "(defparameter *cd-database* (make-database \"cd\"))")

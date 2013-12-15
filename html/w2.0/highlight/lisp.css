@@ -1,0 +1,25 @@
+.lisp {
+	font-family: "Monaco";
+	font-size: 0.8em;
+}
+.lisp  .comment {
+	color : maroon; /* ffbgffg */
+}
+
+.lisp  .string {
+	color : olive;
+}
+
+.lisp  .keywords {
+	color: purple;
+	font-weight : bolder;
+}
+
+.lisp  .global {
+	/*color: blue;*/
+	font-weight: bolder;
+}
+
+.lisp  .brackets {
+	color : black;
+}

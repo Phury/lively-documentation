@@ -1,0 +1,139 @@
+* {
+	border: 0;
+	margin: 0;
+}
+
+body {
+	line-height: 1.2em;`
+	font-family: "Trebuchet MS", sans-serif;
+}
+
+#header {
+	height: 150px;
+}
+
+h1 {
+	display: block;
+	padding: 0.5em;
+	border: 1px solid #CCCCCC;
+	text-align: center;
+	background: #C3C3C3 url("img/h1_grad.png") repeat-x;
+}
+
+h3 {
+	display: block;
+	padding: 0.5em;
+	border: 1px solid #CCCCCC;
+	background: #C3C3C3 url("img/h3_grad.png") repeat-x;
+}
+
+h4 {
+	display: inline;
+	margin-right: 1em;
+}
+
+a {
+	font-family: sans-serif;
+	font-size: 0.8em;
+}
+
+
+#class_nav {
+	float: left;
+	width: 220px;
+	font-size: 0.8em;
+}
+	#class_nav ul {
+		list-style-type: none;
+	}
+		#class_nav ul li {
+			display: block;
+			border: 1px solid #CCCCCC;
+			margin: 0.2em;
+			padding: 0.3em 0.5em 0.3em 0.5em;
+			background: #C3C3C3 url("img/h3_grad.png") repeat-x;
+		}
+		#class_nav ul li:hover {
+			border-left: 5px solid #222299;
+		}
+			#class_nav ul li a {
+				display: block;
+				text-transform: uppercase;
+				text-decoration: none;
+				color: #888888;
+			}
+			
+				#class_nav ul li a:hover {
+					text-decoration: underline;
+					color: #333333;
+				}
+
+#content {
+	width: 800px;
+	margin: auto;
+}
+
+#context_nav {
+	float: right;
+	width: 55px;
+}
+	#context_nav ul {
+		list-style-type: none;
+	}
+		#context_nav ul li {
+			display: block;
+			margin: 0 0 0.5em 0;
+			width: 50px;
+			height: 51px;
+			background: #FFFFFF url("img/context_nav.png") no-repeat;
+			text-align: center;
+		}
+			#context_nav ul li a {
+				display: block;
+				padding-top: 1em;
+			}
+
+.wrapper {
+	margin-right: 60px;
+	margin-bottom: 1em;
+	border: 1px solid #CCCCCC;
+}
+
+.box {
+	padding: 0.5em;
+}
+
+	.descr {
+		margin: 1em;
+		font-style: italic;
+	}
+
+	dl {
+	}
+		dl dt {
+			font-weight: bold;
+			margin-left: 1em;
+		}
+	
+		dl dd {
+			margin-left: 2em;
+			margin-bottom: 0.5em;
+		}
+			dl dd a {
+				float: right;
+				margin: 0 1em 0 1em;
+				padding: 0.1em 0.5em 0.1em 0.5em;
+				color: #C3C3C3;
+				text-decoration: none;
+			}
+				dl dd a:hover {
+					background: #009900;
+					color: #FFFFFF;
+				}
+	.toggle {
+		display: block;
+		margin: 1em 0 1em 0;
+		height: 30px;
+		background: #FFFFFF url("img/toggle_up.png") no-repeat right;
+	}
+		.toggle span { display: none; }

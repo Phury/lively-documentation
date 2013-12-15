@@ -1,0 +1,54 @@
+<!-- TMPL_INCLUDE 'header.html' -->
+
+<div id="content">
+		
+	<h1>Class <a href="?<!-- TMPL_VAR uri -->"><!-- TMPL_VAR name --></a></h1>
+	
+	<div class="grid grid36">
+		
+		<div id="sidebar" class="elt">
+			<div class="filter">
+			<!-- TMPL_CALL pkg-list -->
+			</div>
+		</div>
+		
+		<div class="elt">
+	
+			<div class="mod">
+				
+				<h2><!-- TMPL_VAR name --></h2>
+				<p class="docstring"><!-- TMPL_VAR docstring --></p>
+				
+				
+				<!-- TMPL_IF slot-table --><!-- TMPL_CALL slot-table --><!-- /TMPL_IF -->
+				
+				
+				<!-- TMPL_IF method-table --><!-- TMPL_CALL method-table --><!-- /TMPL_IF -->
+				
+				<div class="inline">
+					<!-- TMPL_CALL superclasses -->
+					<!-- TMPL_CALL subclasses -->
+				</div>
+				
+			</div><!-- end of mod -->
+	
+			<div class="mod">
+				<h2>Class Documentation</h2>
+				<!-- TMPL_CALL class -->
+			</div><!-- end of mod -->
+	
+			<div class="mod">
+				<h2>Slots Documentation</h2>
+				<!-- TMPL_CALL slots -->
+			</div><!-- end of mod -->
+	
+			<div class="mod">
+				<h2>Methods Documentation</h2>
+				<!-- TMPL_CALL methods -->
+			</div><!-- end of mod -->
+			
+		</div><!-- end of elt -->
+	</div><!-- end of grid -->	
+</div><!-- end of content -->
+	
+<!-- TMPL_INCLUDE 'footer.html' -->
